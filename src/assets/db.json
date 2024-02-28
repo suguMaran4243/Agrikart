@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "firstName": "Sugumaran",
+      "lastName": "R",
+      "gener": "Male",
+      "username": "sugumaranrk@gmail.com",
+      "password": "sugu@123",
+      "phoneNumber": "9150632151",
+      "user": "customer",
+      "village": "Elandhaikudam",
+      "city": "Ariyalur",
+      "pin": "621851",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "id": "85aa"
+    },
+    {
+      "id": "5bc0",
+      "firstName": "Suvedha",
+      "lastName": "S",
+      "gender": "Female",
+      "userId": "2001",
+      "username": "suvedha@gmail.com",
+      "password": "suve@2001",
+      "phoneNumber": "7010815864",
+      "user": "Customer",
+      "village": "Thirumanur",
+      "city": "Ariyalur",
+      "pin": "621851",
+      "state": "Tamil Nadu",
+      "country": "India"
+    }
+  ]
+}

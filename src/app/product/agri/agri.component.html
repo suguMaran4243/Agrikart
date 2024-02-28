@@ -1,0 +1,18 @@
+<h1 style="text-align: center;">Agricultural Products</h1>
+<div class="product-container">
+
+<div class="product" *ngFor="let product of products">
+<div>
+<h3 id="product-title">{{product.product_name}}<span><i class="bi bi-heart"></i></span></h3>
+</div>
+<div class="line">
+
+</div>
+<img [src]="product.product_image" alt="" id="product-image" width="200px" height="200px">
+<p id="price">{{product.product_prize |currency:'INR'}}</p>
+<div class="buttons">
+<button class="btn btn-success">Buy now</button>
+<button class="btn btn-dark">Add to cart <i class="bi bi-cart-fill"></i></button>
+</div>
+</div>
+<!-- <app-layout></app-layout> -->

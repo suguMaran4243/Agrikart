@@ -1,0 +1,110 @@
+
+<h1>Sign up</h1>
+<div class="sign-up">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <i class="bi bi-person-fill-add" id="signup-logo"></i>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    
+
+<form action="" (ngSubmit)="submitForm()" [formGroup]="signupForm">
+
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="firstname">First Name</label>
+            <input type="text" name="" id="firstname" class="form-control"  formControlName="firstName">
+        </div>
+        <div class="form-group col-md-6">
+        <label for="lastname">LastName</label>
+         <input type="text" name="" id="lastname" class="form-control" formControlName="lastName">
+         </div>
+    </div>
+    
+<div class="gender">
+    <label for="gender">Gender</label>
+    <input type="radio" name="gender" id="Male" value="Male" formControlName="gender" >Male
+    <input type="radio" name="gender" id="Female" value="Female" formControlName="gender">Female <br>
+</div>
+<div class="form-group col-md-6">
+    <label for="userId">User id</label><br>
+    <input type="text" name="" id="userId" class="form-control" formControlName="userId"    required>
+   </div>
+
+   <div class="form-group col-md-6">
+    <label for="email">Email</label><br>
+    <input type="email" name="" id="email" class="form-control" formControlName="username"    required>
+   </div>
+
+   <div class="form-group col-md-6">
+    <label for="pass">Password</label><br>
+    <input type="password" name="" id="pass" class="form-control" formControlName="password"   required>
+   </div>
+   
+   <div class="form-group col-md-6">
+    <label for="phone">Phone Number</label><br>
+    <input type="tel" name="" id="phone" class="form-control" formControlName="phoneNumber">
+   </div>
+
+   <div class="usertype">
+    <label for="user">Choose user type</label>
+    <input type="radio" name="user" id="farmer" value="Farmer" formControlName="user">Farmer 
+    <input type="radio" name="user" id="customer" value="Customer" formControlName="user">Customer<br>
+   </div>
+   
+
+    <fieldset>
+       <legend>Address</legend>
+        <div class="row">
+            <div class="form-group col-md-6">
+              
+                <label for="village">Village</label>
+                <input type="text" name="" class="form-control" id="village" formControlName="village">
+    
+            </div>
+            <div class="form-group col-md-4">
+                <label for="city">City</label>
+                <input type="text" name="" class="form-control" id="city" formControlName="city">
+    
+            </div>
+            <div class="form-group col-md-2">
+                <label for="pin">Pincode</label>
+                <input type="text" name="" class="form-control" id="pin" formControlName="pin" >
+    
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="form-group col-md-6">
+
+                <label for="state">State</label>
+                <input type="text" name="" id="state" class="form-control" formControlName="state">
+
+            </div>
+            <div class="form-group col-md-6">
+
+                <label for="country">Country</label>
+                <input type="text" name="" id="country" class="form-control" formControlName="country">
+
+            </div>
+        </div>
+
+    </fieldset>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <input type="submit" value="Signup" class="btn btn-success" >
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+   
+
+
+
+</form>
+
+</div>
+

@@ -1,0 +1,46 @@
+#home
+{
+    /* width: 100vw;
+    background-image: url('/assets/home.jpeg');
+    background-repeat: no-repeat; */
+}
+
+.row
+{
+    background-image: url('/assets/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   background-blend-mode:darken;
+   
+    width: 100vw;
+    height: 100vh;
+}
+#heading
+{
+background-color: rgba(210, 202, 188, 0.164);
+
+margin: 200px auto;
+text-align: center;
+padding: 20px;
+/* border-radius: 40px; */
+
+
+}
+#header
+{
+    font-size: 40px;
+}
+
+
+.line
+{
+    margin-top: 100px;
+    border-bottom: 4px solid green;
+    width: 100%;
+}
+#get
+{
+    width: 200px;
+    font-size: 20px;
+}
