@@ -15,21 +15,26 @@ position: relative;
     color: black;
     
 }
+#cart
+{
+    font-size: 40px;
+    cursor: pointer;
+    /* padding: 30px; */
+    margin: 10px;
+    text-align: center;
+}
 .logo
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 40px;
 }
-.login
+.login 
 {
     float: right;
-}
-.login
-{
-    
-    margin: 10px;
     
 }
+
+
 .login button
 {
    
@@ -38,4 +43,12 @@ position: relative;
    margin-left: 20px;
    cursor: pointer;
    padding: 10px;
+}
+.cart-num sup
+{
+
+    /* background-color: yellow; */
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
 }

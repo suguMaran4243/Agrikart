@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
-import { LayoutModule } from '../Shared/components/layout/layout.module';
-// import { LayoutComponent } from '../Shared/components/layout/layout.component';
+
+
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { LayoutModule } from '../Shared/components/layout/layout.module';
     CommonModule,
     ProductRoutingModule,
     RouterModule,
-    LayoutModule
+    
   ]
 })
 export class ProductModule { }

@@ -1,21 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Injectable, OnInit, Output } from '@angular/core';
 import { ProductService } from 'src/app/Shared/Services/agriculture-products.service';
-
 @Component({
   selector: 'app-agri',
   templateUrl: './agri.component.html',
   styleUrls: ['./agri.component.css']
 })
-export class AgriComponent implements OnInit{
+@Injectable()
+export class AgriComponent{
 
-  products=[];
-  constructor(private service:ProductService)
+  product=[];
+  
+  constructor(public service:ProductService)
   {
-    console.log('called')
-    
+    this.product=this.service.products
   }
-  ngOnInit(): void {
-    this.products=this.service.products
-  }
+ 
+
+  
 
 }

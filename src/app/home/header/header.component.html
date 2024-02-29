@@ -7,8 +7,9 @@
          <a routerLink="About">About</a>  
           <a routerLink="Product">Products</a>
          <a routerLink="Contact">Contact</a>
+        <button class="btn"><i class="bi bi-cart" id="cart"><span class="cart-num"><sup>0</sup></span></i></button> 
          <div class="login">
-          
+        
          <div  *ngIf="!authService.isauthenticated()else loggedInTemplate">
           <button class="btn btn-dark" routerLink="Login" (click)="login()">Login</button> 
          </div>    

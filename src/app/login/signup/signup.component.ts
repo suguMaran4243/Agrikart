@@ -1,15 +1,15 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/Shared/Services/dataservice.service';
-import { ReactiveFormsModule } from '@angular/forms';
+// import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @Component({
   selector: 'app-signup',
-  standalone:true,
-  imports:[ReactiveFormsModule],
+  // standalone:true,
+  // imports:[ReactiveFormsModule],
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
@@ -43,9 +43,11 @@ this.signupForm=this.formBuilder.group({
   }
   submitForm()
   {
+    let headers:HttpHeaders=new HttpHeaders();
+    headers=headers.set('Accept','application/json');
     const user=this.signupForm.value;
     const user_id=this.signupForm.get('userId').value;
-    this.http.post('http://localhost:3000/users',user).subscribe((response)=>
+    this.http.post('http://localhost:3000/users',user,{headers}).subscribe((response)=>
     {
       console.log(response);
     });
