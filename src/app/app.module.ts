@@ -21,6 +21,7 @@ import { LoginDataService } from './Shared/Services/login-data.service';
 import { ProductService } from './Shared/Services/agriculture-products.service';
 import { ProductModule } from './product/product.module';
 import { ProductRoutingModule } from './product/product-routing.module';
+import { CartDataService } from './Shared/Services/cartdata.service';
 
 
 
@@ -51,7 +52,7 @@ import { ProductRoutingModule } from './product/product-routing.module';
     
 
   ],
-  providers: [LoginDataService,AuthenticationService,ProductService],
+  providers: [LoginDataService,AuthenticationService,ProductService,CartDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

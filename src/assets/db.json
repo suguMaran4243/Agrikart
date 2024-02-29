@@ -32,5 +32,53 @@
       "state": "Tamil Nadu",
       "country": "India"
     }
-  ]
-}
+  ],
+
+  
+    "cart": [
+      {
+        "id": "202",
+        "product_name": "Lady's Finger seed",
+        "product_image": "assets/ladysfingerseeds.jpeg",
+        "product_prize": "20",
+        "product_category": "seeds"
+      },
+      {
+        "id": "102",
+        "product_name": "Maize",
+        "product_image": "assets/maize.jpeg",
+        "product_prize": "800",
+        "product_category": "agri"
+      },
+      {
+        "id": "102",
+        "product_name": "Maize",
+        "product_image": "assets/maize.jpeg",
+        "product_prize": "800",
+        "product_category": "agri"
+      },
+      {
+        "id": "103",
+        "product_name": "Sugarcane",
+        "product_image": "assets/sugarcane.jpeg",
+        "product_prize": "2000",
+        "product_category": "agri"
+      },
+      {
+        "id": "202",
+        "product_name": "Lady's Finger seed",
+        "product_image": "assets/ladysfingerseeds.jpeg",
+        "product_prize": "20",
+        "product_category": "seeds"
+      },
+      {
+        "id": "309",
+        "product_name": "Cow Dung",
+        "product_image": "assets/cowmanure.jpeg",
+        "product_prize": "5000",
+        "product_category": "fertilizer"
+      }
+    ]
+  }
+
+  

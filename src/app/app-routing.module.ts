@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -11,10 +12,12 @@ const routes: Routes = [
   {path:'About',component:AboutComponent},
   {path:'Product',component:ProductComponent},
   {path:'Contact',component:ContactComponent},
+  {path:'Cart',component:CartComponent},
   {
     path:'Login',
     loadChildren:()=>import('./login/login--routing.module').then((m)=>m.LoginRoutingModule)
-  }
+  },
+  
 ];
 
 @NgModule({
