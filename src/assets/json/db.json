@@ -33,5 +33,13 @@
       "country": "India"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "102",
+      "product_name": "Maize",
+      "product_image": "assets/images/maize.jpeg",
+      "product_prize": "800",
+      "product_category": "agri"
+    }
+  ]
 }

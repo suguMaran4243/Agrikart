@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
 import { CartComponent } from '../cart/cart.component';
+import { ProductTabService } from './Shared/Services/product-tab.service';
 
 
 
@@ -15,6 +16,7 @@ import { CartComponent } from '../cart/cart.component';
     ProductRoutingModule,
     RouterModule,
     
-  ]
+  ],
+  providers:[ProductTabService]
 })
 export class ProductModule { }

@@ -21,7 +21,6 @@ export class LayoutComponent implements OnInit{
   currentType;
   constructor(private route:ActivatedRoute,private service:ProductService,private cartservice:CartDataService,private http:HttpClient)
   {
-    // this.products=this.service.products
     
   }
 ngOnInit(): void {
@@ -30,14 +29,15 @@ ngOnInit(): void {
   this.products=this.service.products.filter((x)=>x.product_category === this.currentTab)
  
 }
+
 addtoCart(product:Product)
 {
-  this.cartservice.addTocart(product);
-  console.log('added')
-  this.http.post('http://localhost:3000/cart',product).subscribe((d)=>
+  this.cartservice.addTocart(product).subscribe((data)=>
   {
-    console.log(d)
+
   })
+
+  
 }
   
   

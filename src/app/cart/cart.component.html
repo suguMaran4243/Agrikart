@@ -1,16 +1,18 @@
 <h2>Cart Items</h2>
 <div class="cart-items">
-
+    <button (click)="fetchdata()" class="btn btn-success">Fetch</button>
+    <button (click)="deletedata()" class="btn btn-danger">Delete</button>
 <table>
 <thead>
-    <tr>
+    <tr *ngFor="let head of tableHeaders">
     
-        <th>S.No</th>
-        <th>id</th>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Prize</th>
-        <th>Category</th>
+        <th>{{head.id}}</th>
+        <th>{{head.pId}}</th>
+        <th>{{head.productImage}}</th>
+        <th>{{head.productName}}</th>
+        <th>{{head.productPrize}}</th>
+        <th>{{head.productCategory}}</th>
+        <th></th>
     
    
     
@@ -26,13 +28,13 @@
     
     <td>{{data.product_prize |currency:'INR'}}</td>
     <td>{{data.product_category}}</td>
+    <td><button class="btn btn-danger" (click)="deleteProduct(data.id)">Delete</button></td>
 
 </tr>
 
 
 </table>
-<button (click)="fetchdata()" class="btn btn-success">Fetch</button>
-<button (click)="deletedata()" class="btn btn-danger">Delete</button>
+
 
 
 

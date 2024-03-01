@@ -1,31 +1,73 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, map, of } from "rxjs";
 import { Product } from "src/app/Model/product.model";
+import axios from "axios";
 
 @Injectable()
 export class CartDataService
 {
+  
   private apiUrl='http://localhost:3000';
     constructor(private http:HttpClient)
     {
-
+     
     }
+    
     public cart:Product[]=[];
 
-    addTocart(product:Product)
+    cartItems:Observable<any[]>;
+
+    
+
+  public  addTocart(product:Product):Observable<Product>
     {
-        this.cart.push(product);
-        console.log(this.cart)
+      
+      let headers:HttpHeaders=new HttpHeaders();
+      headers=headers.set('Accept','application/json');
+       return this.http.post<Product>(`${this.apiUrl}/cart`,product,{headers})  
     }
 
 
-    getProducts():Observable<Product[]>
+ public getProducts():Observable<Product[]>
     {
+      this.cartItems=this.http.get<any []>(`${this.apiUrl}/cart`)
       return this.http.get<Product[]>(`${this.apiUrl}/cart`);
     }
-    deleteProducts():Observable<any>
+   
+    //by saras
+    public  deleteProducts(): Observable<any []> {
+        let i: number = 0;
+        let url=""
+        let count=0;
+        this.http.get<any[]>(`${this.apiUrl}/cart`).forEach(
+        (data) => {
+
+          let p=data;
+  p.forEach((product)=>{
+    url = `${this.apiUrl}/cart/${product.id}`
+        this.http.delete<any []>(url).subscribe()
+        console.log("crossed delete")
+  })
+      
+      }
+       ) 
+       return of<any>(i);
+       }
+       
+  
+
+public getProductsLength():Observable<number>
     {
-        return this.http.delete<any>(`${this.apiUrl}/cart`);
+      return this.getProducts().pipe(map((items)=>items.length))
     }
+
+ public deleteProduct(id:string):Observable<any>
+    {
+       return this.http.delete<any>(`${this.apiUrl}/cart/${id}`);
+    }
+
+
+
+    
 }

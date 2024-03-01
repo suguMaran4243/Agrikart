@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductTabService } from '../Shared/Services/product-tab.service';
+import { ProductTabService } from './Shared/Services/product-tab.service';
 // import { LayoutComponent } from '../Shared/components/layout/layout.component';
 
 @Component({
@@ -11,13 +11,13 @@ import { ProductTabService } from '../Shared/Services/product-tab.service';
 })
 export class ProductComponent {
  
-   tabs=[];
+  public tabs=[];
  
   constructor(private route :Router,private service :ProductTabService)
   {
    this.tabs=this.service.cardsData
   }
-  navigateto(id:string)
+ public navigateto(id:string)
   {
    this.route.navigate(['/Agri',id]);
   }

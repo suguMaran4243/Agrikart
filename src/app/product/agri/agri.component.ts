@@ -10,7 +10,7 @@ export class AgriComponent{
 
   product=[];
   
-  constructor(public service:ProductService)
+  constructor(private service:ProductService)
   {
     this.product=this.service.products
   }

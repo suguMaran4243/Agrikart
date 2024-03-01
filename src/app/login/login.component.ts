@@ -3,12 +3,12 @@ import { SignupComponent } from './signup/signup.component';
 import { Form, FormControl, FormGroup, FormsModule } from '@angular/forms';
 import { OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
-import { LoginDataService } from '../Shared/Services/login-data.service';
-import { AuthenticationService } from '../Shared/Services/authentication.service';
+import { LoginDataService } from './Shared/Services/login-data.service';
+import { AuthenticationService } from './Shared/Services/authentication.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { LoginUserService } from '../Shared/Services/login-user.service';
+import { LoginUserService } from './Shared/Services/login-user.service';
 
 @Component({
   selector: 'app-login',

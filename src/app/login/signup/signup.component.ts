@@ -1,15 +1,12 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { DataService } from 'src/app/Shared/Services/dataservice.service';
-// import { ReactiveFormsModule } from '@angular/forms';
+import { DataService } from '../Shared/Services/dataservice.service';
 
 
 
 @Component({
   selector: 'app-signup',
-  // standalone:true,
-  // imports:[ReactiveFormsModule],
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
