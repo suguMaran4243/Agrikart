@@ -8,7 +8,7 @@ import { Injectable } from "@angular/core";
 export class LoginUserService
 {
 
-    loggedInuser:string='Welcome ';
+    loggedInuser='Welcome ';
 
     setLoggedInUser(username:string)
     {

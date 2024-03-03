@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, map, of } from "rxjs";
 import { Product } from "src/app/Model/product.model";
-import axios from "axios";
+
 
 @Injectable()
 export class CartDataService
@@ -16,7 +16,7 @@ export class CartDataService
     
     public cart:Product[]=[];
 
-    cartItems:Observable<any[]>;
+    cartItems:Observable<any>;
 
     
 
@@ -37,13 +37,12 @@ export class CartDataService
    
     //by saras
     public  deleteProducts(): Observable<any []> {
-        let i: number = 0;
+        const i= 0;
         let url=""
-        let count=0;
         this.http.get<any[]>(`${this.apiUrl}/cart`).forEach(
         (data) => {
 
-          let p=data;
+          const p=data;
   p.forEach((product)=>{
     url = `${this.apiUrl}/cart/${product.id}`
         this.http.delete<any []>(url).subscribe()

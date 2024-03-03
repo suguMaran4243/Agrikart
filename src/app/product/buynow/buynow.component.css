@@ -1,0 +1,26 @@
+.product
+{
+    width: 400px;
+    margin: 140px auto;
+    border: 3px solid;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.content
+{
+    color: green;
+    font-size: 20px;
+    font-weight: 600;
+}
+.heading
+{
+    font-style: italic;
+}
+.prize
+{
+    color: red;
+    font-size: 30px;
+    font-weight:800;
+}

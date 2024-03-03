@@ -5,6 +5,7 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
 import { CartComponent } from '../cart/cart.component';
 import { ProductTabService } from './Shared/Services/product-tab.service';
+import { BuyNowModule } from './buynow/buynow.module';
 
 
 
@@ -15,6 +16,8 @@ import { ProductTabService } from './Shared/Services/product-tab.service';
     CommonModule,
     ProductRoutingModule,
     RouterModule,
+    BuyNowModule
+ 
     
   ],
   providers:[ProductTabService]

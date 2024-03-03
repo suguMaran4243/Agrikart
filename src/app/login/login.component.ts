@@ -1,12 +1,9 @@
-import { Component, Injectable } from '@angular/core';
-import { SignupComponent } from './signup/signup.component';
-import { Form, FormControl, FormGroup, FormsModule } from '@angular/forms';
+import { Component} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 import { OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { LoginDataService } from './Shared/Services/login-data.service';
 import { AuthenticationService } from './Shared/Services/authentication.service';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { LoginUserService } from './Shared/Services/login-user.service';
 
@@ -15,11 +12,11 @@ import { LoginUserService } from './Shared/Services/login-user.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-@Injectable()
+
 export class LoginComponent implements OnInit{
  
- username:string='';
- password:string='';
+ username='';
+ password='';
  loginForm:FormGroup;
 
 constructor(public service :LoginDataService,public authService:AuthenticationService,public router:Router,public loginuser:LoginUserService)

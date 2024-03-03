@@ -17,6 +17,7 @@ import { DataService } from './Shared/Services/dataservice.service';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    LoginRoutingModule
     
 
     

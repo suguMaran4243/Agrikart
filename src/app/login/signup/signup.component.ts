@@ -1,5 +1,5 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from '../Shared/Services/dataservice.service';
 
@@ -10,7 +10,7 @@ import { DataService } from '../Shared/Services/dataservice.service';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
-export class SignupComponent implements OnInit 
+export class SignupComponent 
 {
   signupForm:FormGroup;
   constructor(private service:DataService,private formBuilder:FormBuilder,private http:HttpClient)
@@ -35,15 +35,12 @@ this.signupForm=this.formBuilder.group({
 
   }
 
-  ngOnInit(): void {
-     
-  }
+  
   submitForm()
   {
     let headers:HttpHeaders=new HttpHeaders();
     headers=headers.set('Accept','application/json');
     const user=this.signupForm.value;
-    const user_id=this.signupForm.get('userId').value;
     this.http.post('http://localhost:3000/users',user,{headers}).subscribe((response)=>
     {
       console.log(response);

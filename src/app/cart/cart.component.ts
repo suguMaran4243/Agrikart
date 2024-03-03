@@ -1,8 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CartDataService } from 'src/app/Shared/Services/cartdata.service';
 import { Product } from '../Model/product.model';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 
 @Component({
@@ -49,11 +48,11 @@ public deletedata()
 public deleteProduct(id:string)
   {
     
-   this.service.deleteProduct(id).subscribe((del)=>
+   this.service.deleteProduct(id).subscribe(()=>
    {
      alert('Successfully deleted');
    },
-   (error)=>
+   ()=>
    {
     alert('unable to delete')
    });

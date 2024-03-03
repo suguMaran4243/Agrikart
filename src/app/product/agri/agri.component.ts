@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Injectable, OnInit, Output } from '@angular/core';
+import { Component,Injectable } from '@angular/core';
 import { ProductService } from 'src/app/Shared/Services/agriculture-products.service';
 @Component({
   selector: 'app-agri',

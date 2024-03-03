@@ -1,7 +1,6 @@
-import { Component, Injectable, OnInit, createNgModule } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { ProductService } from '../../Services/agriculture-products.service';
-import { AgriComponent } from 'src/app/product/agri/agri.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { CartDataService } from '../../Services/cartdata.service';
 
 import { Product } from 'src/app/Model/product.model';
@@ -13,13 +12,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./layout.component.css'],
   
 })
-@Injectable()
 export class LayoutComponent implements OnInit{
   products=[];
 
-  currentTab;
-  currentType;
-  constructor(private route:ActivatedRoute,private service:ProductService,private cartservice:CartDataService,private http:HttpClient)
+  public currentTab:string;
+  
+  constructor(private route:ActivatedRoute,private service:ProductService,private cartservice:CartDataService,private http:HttpClient,private router :Router)
   {
     
   }
@@ -34,10 +32,16 @@ addtoCart(product:Product)
 {
   this.cartservice.addTocart(product).subscribe((data)=>
   {
-
+   console.log(data);
+   
   })
 
   
+}
+navigatetoBuynow(id:string)
+{
+console.log('HI')
+  this.router.navigate(['/Buy',id])
 }
   
   

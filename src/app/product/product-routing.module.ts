@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product.component';
-import { CartComponent } from '../cart/cart.component';
 
 const routes: Routes = [
   
    {path:'',component:ProductComponent},
 
     {path:'Agri/:id',loadChildren: () => import('./agri/agri.module').then(m => m.AgriModule) },
+    {path:'Buy/:id',loadChildren:()=>import('./buynow/buynow.module').then(m=>m.BuyNowModule)}
    
   
 ]

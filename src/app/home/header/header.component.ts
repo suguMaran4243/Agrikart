@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { AuthenticationService } from 'src/app/Shared/Services/authentication.service';
 import { CartDataService } from 'src/app/Shared/Services/cartdata.service';
-// import { LoginUserService } from 'src/app/Shared/Services/login-user.service';
-import { CartComponent } from 'src/app/cart/cart.component';
 import { AuthenticationService } from 'src/app/login/Shared/Services/authentication.service';
 import { LoginUserService } from 'src/app/login/Shared/Services/login-user.service';
 

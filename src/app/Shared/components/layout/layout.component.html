@@ -12,7 +12,7 @@
 <img [src]="product.product_image" alt="" id="product-image" width="200px" height="200px">
 <p id="price">{{product.product_prize |currency:'INR'}}</p>
 <div class="buttons">
-<button class="btn btn-success">Buy now</button>
+<button class="btn btn-success" (click)="navigatetoBuynow(product.id)">Buy now</button>
 <button class="btn btn-dark" (click)="addtoCart(product)">Add to cart <i class="bi bi-cart-fill"></i></button>
 </div>
 
