@@ -17,15 +17,17 @@ export class HeaderComponent implements OnInit{
  
   }
 
+/**
+  * Description: The ngOnit will invoke after the page gets loaded 
+  * @params argument nname type
+ * return -It return the current cart product length in the cart service
+  */
+
   ngOnInit(): void {
     this.cartService.getProductsLength().subscribe((length)=>
     {
       this.cartLength=length;
     })
-  }
-  login()
-  {
-    this.authService.login();
   }
   logout()
   {

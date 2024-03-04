@@ -1,12 +1,16 @@
 <div class="buy-container">
-    <div class="product">
- 
-        <h3 class="heading">{{product.product_name}}</h3>
-        <p class="id">{{product.id}}<p>
-        <img [src]="product.product_image" alt="">
-        <p class="prize">{{product.product_prize}}</p>
-          
-        <p class="content">Thank you!For pre-booking.Further details of your product will be communicated soon. </p>
+  <div class="product">
+    <h3 class="heading">{{ product.product_name }}</h3>
+    <p class="id">{{ product.id }}</p>
+    <p>
+      <img [src]="product.product_image" alt="" />
+    </p>
 
-    </div>
+    <p class="prize">{{ product.product_prize }}</p>
+
+    <p class="content">
+      Thank you!For pre-booking.Further details of your product will be
+      communicated soon.
+    </p>
+  </div>
 </div>

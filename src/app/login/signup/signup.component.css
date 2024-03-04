@@ -1,6 +1,11 @@
+h1{
+    margin-top: 80px;
+    /* position: fixed; */
+    text-align: center;
+}
 .sign-up
 {
-    margin: 0 auto;
+    margin: 80px auto;
     width: 40%;
     border: 10px solid rgb(211, 248, 211);
     border-radius: 20px;

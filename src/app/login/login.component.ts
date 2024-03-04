@@ -51,11 +51,13 @@ constructor(public service :LoginDataService,public authService:AuthenticationSe
         if(authenticated)
         {
           alert('login successfull');
+          this.authService.login();
           this.router.navigate(['Home']);
         }
         else
         {
           alert('Please signup before login')
+          this.router.navigate(['Signup'])
         }
       }
     )

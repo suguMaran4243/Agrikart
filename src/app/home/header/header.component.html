@@ -11,7 +11,7 @@
          <div class="login">
         
          <div  *ngIf="!authService.isauthenticated()else loggedInTemplate">
-          <button class="btn btn-dark" routerLink="Login" (click)="login()">Login</button> 
+          <button class="btn btn-dark" routerLink="Login">Login</button> 
          </div>    
           <ng-template #loggedInTemplate>
             <p>{{loggedInUser}}</p>

@@ -6,23 +6,15 @@ import { ProductTabService } from './Shared/Services/product-tab.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
-  
+  styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
- 
-  public tabs=[];
- 
-  constructor(private route :Router,private service :ProductTabService)
-  {
-   this.tabs=this.service.cardsData
-  }
- public navigateto(id:string)
-  {
-   this.route.navigate(['/Agri',id]);
-  }
-  
-  
+  public tabs = [];
 
-
+  constructor(private route: Router, private service: ProductTabService) {
+    this.tabs = this.service.cardsData;
+  }
+  public navigateto(id: string) {
+    this.route.navigate(['/Agri', id]);
+  }
 }

@@ -2,6 +2,7 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from '../Shared/Services/dataservice.service';
+import { Router } from '@angular/router';
 
 
 
@@ -13,7 +14,7 @@ import { DataService } from '../Shared/Services/dataservice.service';
 export class SignupComponent 
 {
   signupForm:FormGroup;
-  constructor(private service:DataService,private formBuilder:FormBuilder,private http:HttpClient)
+  constructor(private service:DataService,private formBuilder:FormBuilder,private http:HttpClient,private router:Router)
 
   {
 console.log("signup");
@@ -46,6 +47,10 @@ this.signupForm=this.formBuilder.group({
       console.log(response);
     });
   
+  }
+  naviagatetoLogin()
+  {
+  this.router.navigate(['Login'])
   }
  
   

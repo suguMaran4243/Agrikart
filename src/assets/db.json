@@ -48,6 +48,7 @@
       "state": "Tamil Nadu",
       "country": "India"
     }
+    
   ],
   "cart": [
     {
@@ -55,13 +56,6 @@
       "product_name": "Lady's Finger seed",
       "product_image": "assets/images/ladysfingerseeds.jpeg",
       "product_prize": "20",
-      "product_category": "seeds"
-    },
-    {
-      "id": "203",
-      "product_name": "Black Gram seed",
-      "product_image": "assets/images/blackgramseeds.jpeg",
-      "product_prize": "80",
       "product_category": "seeds"
     }
   ]

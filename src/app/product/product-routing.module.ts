@@ -1,24 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product.component';
+import { LoginGuardService } from '../Shared/Services/login-guard.service';
 
 const routes: Routes = [
-  
-   {path:'',component:ProductComponent},
+  { path: '', component: ProductComponent },
 
-    {path:'Agri/:id',loadChildren: () => import('./agri/agri.module').then(m => m.AgriModule) },
-    {path:'Buy/:id',loadChildren:()=>import('./buynow/buynow.module').then(m=>m.BuyNowModule)}
-   
-  
-]
-  
-   
-   
-
+  {
+    path: 'Agri/:id',
+    loadChildren: () => import('./agri/agri.module').then((m) => m.AgriModule),
     
+  },
+  {
+    path: 'Buy/:id',
+    loadChildren: () =>
+      import('./buynow/buynow.module').then((m) => m.BuyNowModule),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ProductRoutingModule { }
+export class ProductRoutingModule {}

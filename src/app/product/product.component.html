@@ -1,49 +1,45 @@
 <div class="product">
-
-    <div class="row" id="product-container">
-        <div class="col-md-4" id="product" *ngFor="let card of tabs">
-      
-            <div class="product-image">
-                <img [src]="card.cardImage" alt="" width="250px" height="200px">
-            </div>
-            <h3>{{card.title}}</h3>
-            <div class="product-content">
-               <p>{{card.content}}</p>
-            </div>
-            <div class="card-button">
-                <button type="button" class="btn btn-outline-success" (click)="navigateto(card.id)">Explore</button>
-            </div>
-            
-        </div>
-       
-        <div class="col-md-4" id="father-agri">
-           <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-2">
-                <img src="assets/images/msswami.jpeg" alt="" >
-            </div>
-            <div class="col-md-6" id="father-about">
-                <h1>"If Agriculture fails <br>
-                everything else will fail"</h1>
-                <p>- M S Swaminathan <br> Father of Indian Green Revolution</p>
-            </div>
-            <div class="col-md-2">
-               
-            </div>
-            
-           </div>
-                   
-              
-            
-            
-            
-            
-        </div>
-        <div class="col-md-4"></div>
+  <div class="row" id="product-container">
+    <div class="col-md-4" id="product" *ngFor="let card of tabs">
+      <div class="product-image">
+        <img [src]="card.cardImage" alt="" width="250px" height="200px" />
+      </div>
+      <h3>{{ card.title }}</h3>
+      <div class="product-content">
+        <p>{{ card.content }}</p>
+      </div>
+      <div class="card-button">
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          (click)="navigateto(card.id)"
+        >
+          Explore
+        </button>
+      </div>
     </div>
 
+    <div class="col-md-4" id="father-agri">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+          <img src="assets/images/msswami.jpeg" alt="" />
+        </div>
+        <div class="col-md-6" id="father-about">
+          <h1>
+            "If Agriculture fails <br />
+            everything else will fail"
+          </h1>
+          <p>
+            - M S Swaminathan <br />
+            Father of Indian Green Revolution
+          </p>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
-
-

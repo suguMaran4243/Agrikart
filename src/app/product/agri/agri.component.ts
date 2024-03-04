@@ -13,6 +13,7 @@ export class AgriComponent{
   constructor(private service:ProductService)
   {
     this.product=this.service.products
+    console.log("hi")
   }
  
 
