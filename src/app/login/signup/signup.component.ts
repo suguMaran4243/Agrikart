@@ -39,19 +39,21 @@ this.signupForm=this.formBuilder.group({
   
   submitForm()
   {
+    console.log("hi")
     let headers:HttpHeaders=new HttpHeaders();
     headers=headers.set('Accept','application/json');
     const user=this.signupForm.value;
     this.http.post('http://localhost:3000/users',user,{headers}).subscribe((response)=>
     {
       console.log(response);
+   
+      
+    
     });
+    this.router.navigate(['./Login'])
   
   }
-  naviagatetoLogin()
-  {
-  this.router.navigate(['Login'])
-  }
+  
  
   
 

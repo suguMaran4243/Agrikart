@@ -1,7 +1,7 @@
 <div class="cart-items">
   <h2>Cart Items</h2>
-  <button (click)="fetchdata()" class="btn btn-success">Fetch</button>
-  <button (click)="deletedata()" class="btn btn-danger">Delete</button>
+  <button (click)="getCartItems()" class="btn btn-success">Show Cart</button>
+  <button (click)="cleardata()" class="btn btn-danger">Delete</button>
   <table>
     <thead>
       <tr *ngFor="let head of tableHeaders">
@@ -9,25 +9,38 @@
         <th>{{ head.pId }}</th>
         <th>{{ head.productImage }}</th>
         <th>{{ head.productName }}</th>
+        <th>{{ head.productQuantity }}</th>
         <th>{{ head.productPrize }}</th>
         <th>{{ head.productCategory }}</th>
+        <th></th>
         <th></th>
       </tr>
     </thead>
 
     <tr *ngFor="let data of cart; index as i">
-      <td>{{ i + 1 }}</td>
+      <td>{{i}}</td>
       <td>{{ data.id }}</td>
       <td><img [src]="data.product_image" alt="" /></td>
       <td>{{ data.product_name }}</td>
+      <td>{{ data.quantity }}</td>
 
-      <td>{{ data.product_prize | currency : "INR" }}</td>
+      <td>{{ data.product_prize * data.quantity | currency : "INR" }}</td>
       <td>{{ data.product_category }}</td>
       <td>
-        <button class="btn btn-danger" (click)="deleteProduct(data.id)">
+        <button class="btn btn-danger" (click)="deleteproduct(i)">
           Delete
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-success" (click)="navigatetoOrder(i)">
+          Buy now
         </button>
       </td>
     </tr>
   </table>
+  <div class="buyall">
+    <button class="btn btn-success" (click)="buyall()">Buy all</button>
+  </div>
+ 
 </div>
+

@@ -1,35 +1,38 @@
+<div class="login">
+  <form action="" class="login-form" [formGroup]="loginForm">
+    <i
+      class="bi bi-person-check-fill"
+      style="color: #008000; width: 100px; font-size: 80px"
+    ></i
+    ><br />
+    <label for="username">Username</label><br />
+    <input
+      type="text"
+      name=""
+      id="username"
+      formControlName="username"
+    /><br /><br />
 
-    <div class="login">
+    <label for="pass">Password</label><br />
+    <input
+      type="password"
+      name=""
+      id="pass"
+      formControlName="password"
+    /><br /><br />
 
-            <form action="" class="login-form" [formGroup]="loginForm">
-                <i class="bi bi-person-check-fill" style="color: #008000;width: 100px;font-size: 80px;"></i><br>
-                 <label for="username">Username</label><br>
-                 <input type="text" name="" id="username"  formControlName="username"><br><br>
-             
-                 <label for="pass">Password</label><br>
-                 <input type="password" name="" id="pass"  formControlName="password"><br><br>
-             
-                 <input type="submit" value="Login" class="btn btn-success" (click)="Login()">
-                 
-               
-        
-            <div class="sign-up">
-                <p>New user ? <a routerLink="Signup">Sign up</a> </p>
-                <span><a href="#" style="color: red;">Forget Password?</a></span>
-               
-            </div>
-        </form>
-           
+    <input
+      type="submit"
+      value="Login"
+      class="btn btn-success"
+      (click)="Login()"
+    />
 
-      
-
-       
+    <div class="sign-up">
+      <!-- <p>New user ? <a routerLink="Signup">Sign up</a></p> -->
+      <p>New user ? <button class="btn btn-info" (click)="navigateToSignup()">Signup</button></p>
+      <span><a href="#" style="color: red">Forget Password?</a></span>
+    </div>
+  </form>
 </div>
-<router-outlet></router-outlet>
-
-
-    
-
-
-
-
+<!-- <router-outlet></router-outlet> -->

@@ -2,6 +2,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { CartDataService } from 'src/app/Shared/Services/cartdata.service';
 import { Product } from '../Shared/Model/product.model';
 import { HttpClient } from '@angular/common/http';
+import { CartServiceService } from '../Shared/Services/cart-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class CartComponent {
   @Output() cartLength = new EventEmitter<number>();
   public cart: Product[] = [];
-
+totalamount:number=0;
   tableHeaders = [
     {
       id: 'S.No',
@@ -19,10 +21,11 @@ export class CartComponent {
       productImage: 'Product Image',
       productName: 'Product Name',
       productPrize: 'Product Prize',
+      productQuantity: 'Quantity',
       productCategory: 'Cateogory',
     },
   ];
-  constructor(private service: CartDataService, private http: HttpClient) {}
+  constructor(private service: CartDataService, private http: HttpClient,private cartService:CartServiceService,private router:Router) {}
 
   /*
   Fetches product data from the CartDataServices and update the cart.
@@ -36,9 +39,7 @@ export class CartComponent {
   //Deletes entire product data in the CartdataService and updates the cart
   public deletedata() {
     
-    this.service.deleteProducts().subscribe(() => {
-      
-    });
+    this.service.deleteProducts().subscribe();
   }
 
   //Deletes particular product data in the  CartdataService and update the cart
@@ -51,5 +52,36 @@ export class CartComponent {
         alert('unable to delete');
       }
     );
+  }
+  getCartItems()
+  {
+     this.cart=this.cartService.getCartItems();
+  }
+  deleteproduct(id:number)
+  {
+    console.log(id)
+    this.cartService.deleteFromCart(id);
+  }
+  cleardata()
+  {
+    this.cartService.clearProducts();
+  }
+  navigatetoOrder(id:number)
+  { console.log(id)
+    this.cartService.navigatetoOrder(id);
+   
+  }
+  buyall()
+  {
+
+
+    this.cartService.cartItems.map((val)=>
+    {
+      this.totalamount+=val.product_prize*val.quantity
+    })
+     alert(this.totalamount)
+
+   
+    
   }
 }

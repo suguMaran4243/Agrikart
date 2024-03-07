@@ -29,3 +29,12 @@ img
     height: 100px;
     /* padding: 40px; */
 }
+button
+{
+    margin: 20px;
+}
+.buyall     
+{display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -2,7 +2,6 @@ import { Component} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import { OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
-import { LoginDataService } from './Shared/Services/login-data.service';
 import { AuthenticationService } from './Shared/Services/authentication.service';
 import { Router } from '@angular/router';
 import { LoginUserService } from './Shared/Services/login-user.service';
@@ -18,8 +17,7 @@ export class LoginComponent implements OnInit{
  username='';
  password='';
  loginForm:FormGroup;
-
-constructor(public service :LoginDataService,public authService:AuthenticationService,public router:Router,public loginuser:LoginUserService)
+constructor(public authService:AuthenticationService,public router:Router,public loginuser:LoginUserService)
 {
 
 }
@@ -44,14 +42,14 @@ constructor(public service :LoginDataService,public authService:AuthenticationSe
   {
     this.username=this.loginForm.get('username').value;
     this.password=this.loginForm.get('password').value;
-    console.log(this.username+' '+this.password)
     this.authService.authenticate(this.username,this.password).subscribe(
-      (authenticated)=>
+      (authenticated:any)=>
       {
         if(authenticated)
         {
+          
+        
           alert('login successfull');
-          this.authService.login();
           this.router.navigate(['Home']);
         }
         else
@@ -63,6 +61,10 @@ constructor(public service :LoginDataService,public authService:AuthenticationSe
     )
     this.loginuser.setLoggedInUser(this.username);
     
+  }
+  navigateToSignup()
+  {
+    this.router.navigate(['Signup'])
   }
 
 }

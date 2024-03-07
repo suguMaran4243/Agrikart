@@ -3,7 +3,7 @@
 background-color: rgba(109, 142, 55, 0.587);
 float: left;
 width: 100vw;
-height: 70px;
+height: 90px;
 top: 0;
 position: fixed;
 
@@ -15,14 +15,6 @@ position: fixed;
     color: black;
     
 }
-#cart
-{
-    font-size: 40px;
-    cursor: pointer;
-    /* padding: 30px; */
-    margin: 10px;
-    text-align: center;
-}
 .logo
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,7 +23,14 @@ position: fixed;
 .login 
 {
     float: right;
+
+    margin:20px;
+    font-size: 30px;
     
+}
+.login #cart
+{
+    font-size: 30px;
 }
 
 
@@ -39,10 +38,8 @@ position: fixed;
 {
    
    font-size: 20px;
-   margin-top:0 px;
-   margin-left: 20px;
-   cursor: pointer;
-   padding: 10px;
+   margin-top: px;
+  
 }
 .cart-num sup
 {
@@ -51,4 +48,12 @@ position: fixed;
     font-size: 30px;
     border-radius: 50%;
     text-align: center;
+}
+.logo-image
+{
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product.component';
-import { LoginGuardService } from '../Shared/Services/login-guard.service';
+import { AuthGuard } from '../login/Shared/Guard/auth.guard';
 
 const routes: Routes = [
   { path: '', component: ProductComponent },
@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: 'Agri/:id',
     loadChildren: () => import('./agri/agri.module').then((m) => m.AgriModule),
+    canActivate:[AuthGuard]
     
   },
   {

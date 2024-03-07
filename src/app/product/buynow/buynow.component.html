@@ -5,12 +5,10 @@
     <p>
       <img [src]="product.product_image" alt="" />
     </p>
+   
+    <span>Prize of {{product.product_name}} {{countValue}} kg/bag:</span> <p class="prize">{{ product.product_prize *countValue }}</p>
+    <div class="count"><span class="decrease" (click)="decrement()">-</span>{{countValue}}<span class="increase" (click)="increment()">+</span></div>
 
-    <p class="prize">{{ product.product_prize }}</p>
-
-    <p class="content">
-      Thank you!For pre-booking.Further details of your product will be
-      communicated soon.
-    </p>
+    <button (click)="navigateToPayment()">Pay now</button>
   </div>
 </div>

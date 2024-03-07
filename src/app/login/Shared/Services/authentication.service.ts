@@ -1,6 +1,7 @@
 import {Injectable } from "@angular/core";
 import {HttpClient} from '@angular/common/http';
 import { Observable, map } from "rxjs";
+import { Router } from "@angular/router";
 @Injectable(
     {
         providedIn:'root'
@@ -8,12 +9,15 @@ import { Observable, map } from "rxjs";
 )
 export class AuthenticationService
 {
-//    private userData='assets/user-data.json'
+
+   
       private userData='http://localhost:3000/users';
 
-      private isLoggedIn=false;
+     firstName:string='WELCOME';
+
+     
    
-    constructor( private http :HttpClient)
+    constructor( private http :HttpClient,private router:Router)
     {
     
     }
@@ -24,25 +28,39 @@ export class AuthenticationService
             {
                 if(Array.isArray(users))
                 {
+
                     const authencationUser=users.find(user=>user.username === username && user.password === password);
-                    console.log(authencationUser)
-                    return !!authencationUser;
+                    
+                    if(authencationUser)
+                    {
+    
+                        sessionStorage.setItem('myresponse',authencationUser.username)
+                        return !! authencationUser;
+                    }
+                    else{
+                        return false
+                    }
+            
+                    
                 }
+                console.log("Hello")
                 return false;
             }))
     }
-    login()
+    loggedIn()
     {
-        this.isLoggedIn=true;
+        return  sessionStorage.getItem('myresponse')
+    }
+    loggedInName()
+    {
+        return this.firstName;
     }
     logout()
     {
-        this.isLoggedIn=false
+        sessionStorage.removeItem('myresponse');
+        this.router.navigate(['Login'])
     }
-    isauthenticated():boolean
-    {
-        return this.isLoggedIn
-    }
+    
 
     
 }

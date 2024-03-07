@@ -4,6 +4,7 @@ import { CartDataService } from 'src/app/Shared/Services/cartdata.service';
 import { AuthenticationService } from 'src/app/login/Shared/Services/authentication.service';
 import { LoginUserService } from 'src/app/login/Shared/Services/login-user.service';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,6 +13,7 @@ import { LoginUserService } from 'src/app/login/Shared/Services/login-user.servi
 export class HeaderComponent implements OnInit{
 
   public cartLength:number;
+  loginUsername:string;
   constructor(public authService :AuthenticationService,public loginservice:LoginUserService,private router:Router,private cartService:CartDataService)
   {
  
@@ -19,7 +21,7 @@ export class HeaderComponent implements OnInit{
 
 /**
   * Description: The ngOnit will invoke after the page gets loaded 
-  * @params argument nname type
+  * 
  * return -It return the current cart product length in the cart service
   */
 
@@ -28,15 +30,15 @@ export class HeaderComponent implements OnInit{
     {
       this.cartLength=length;
     })
+    
   }
-  logout()
+  login()
   {
-   this.authService.logout();
+    this.authService.loggedIn();
+    this.loginUsername=localStorage.getItem('myresponse');
   }
-get loggedInUser():string
-{
-  return this.loginservice.getLoggedInUser();
-}
+  
+
 navigateToCart()
 {
   this.router.navigate(['Cart']);

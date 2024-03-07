@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../Model/product.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartServiceService {
-  private cartItems:Product[]=[];
-  constructor() {
+  public cartItems:Product[]=[];
+  constructor(private router :Router) {
     // Load cart items from local storage on service initialization
     this.fetchLocalStorage();
   
   }
  private fetchLocalStorage()
   {
-    const storedCart = localStorage.getItem('cart');
+    const storedCart = sessionStorage.getItem('cart');
     if (storedCart) {
       this.cartItems = JSON.parse(storedCart);
   }
@@ -21,7 +22,7 @@ export class CartServiceService {
 }
 private savetoLocalStorage()
 {
-  localStorage.setItem('cart',JSON.stringify(this.cartItems))
+  sessionStorage.setItem('cart',JSON.stringify(this.cartItems))
 }
 
  
@@ -62,5 +63,16 @@ private savetoLocalStorage()
     this.cartItems=[];
 
     this.savetoLocalStorage();
+  }
+
+  navigatetoOrder(id)
+  {
+    
+      
+      // const itemid=this.cartItems.at(id).id;
+      this.router.navigate(['/Order',id])
+    
+    
+   
   }
 }
