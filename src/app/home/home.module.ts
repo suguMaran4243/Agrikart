@@ -9,6 +9,7 @@ import { AuthGuard } from '../login/Shared/Guard/auth.guard';
 import { SignupModule } from '../login/signup/signup.module';
 import { CanDeactivateServices } from '../contact/Shared/Services/canDeactivate.services';
 import { CartModule } from '../cart/cart.module';
+import { NotfoundComponent } from '../notfound/notfound.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -16,6 +17,7 @@ import { CartModule } from '../cart/cart.module';
     FooterComponent,
     AboutComponent,
     ContactComponent,
+    NotfoundComponent,
   ],
   imports: [
     CommonModule,

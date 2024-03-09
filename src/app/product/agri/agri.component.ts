@@ -1,22 +1,16 @@
-import { Component,Injectable } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { ProductService } from 'src/app/Shared/Services/agriculture-products.service';
 @Component({
   selector: 'app-agri',
   templateUrl: './agri.component.html',
-  styleUrls: ['./agri.component.css']
+  styleUrls: ['./agri.component.css'],
 })
 @Injectable()
-export class AgriComponent{
+export class AgriComponent {
+  product = [];
 
-  product=[];
-  
-  constructor(private service:ProductService)
-  {
-    this.product=this.service.products
-    console.log("hi")
+  constructor(private service: ProductService) {
+    this.product = this.service.products;
+    console.log('hi');
   }
- 
-
-  
-
 }

@@ -15,10 +15,14 @@ export class ContactComponent {
 
   constructor(private router:Router)
   {
-     console.log("Contact")
+    
   }
 
-  canExit()
+  /**
+   * Check whether there is unsaved changes before allowing navigation
+   * @returns {boolean}
+   */
+  canExit():boolean
   {
     if(this.firstName || this.email || this.image || this.phoneNum ||this.desc)
     {
@@ -30,7 +34,11 @@ export class ContactComponent {
       return true;
     }
   }
-  navigatetoHome()
+  /**
+   * Navigates to the Home page using the router ['Home']
+   * @returns{void}
+   */
+  navigatetoHome():void
   {
     this.router.navigate(['Home'])
   }

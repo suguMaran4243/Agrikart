@@ -12,7 +12,7 @@
         <i class="bi bi-cart" id="cart"><span class="cart-num"><sup>{{ cartLength }}</sup></span></i>
       </button>
       
-        <button class="btn btn-dark" *ngIf="!authService.loggedIn()" (click)="login()" routerLink="Login">
+        <button class="btn btn-dark" *ngIf="!authService.loggedIn()"  routerLink="Login">
           Login</button>
       
       <button

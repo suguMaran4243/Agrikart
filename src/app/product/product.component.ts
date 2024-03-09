@@ -14,7 +14,13 @@ export class ProductComponent {
     this.tabs = this.service.cardsData;
     console.log("Hi")
   }
-  public navigateto(id: string) {
+  /**
+   * Navigates to the specific route 'Agri' module ,passing an identifier as a route parameter
+   * Uses Angular router to a specified route
+   * @param id 
+   * @returns {void}
+   */
+  public navigateto(id: string) :void{
     this.route.navigate(['/Agri', id]);
   }
 }

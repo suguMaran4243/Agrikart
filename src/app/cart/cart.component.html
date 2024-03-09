@@ -12,13 +12,14 @@
         <th>{{ head.productQuantity }}</th>
         <th>{{ head.productPrize }}</th>
         <th>{{ head.productCategory }}</th>
+        <th>{{ head.orderDate}}</th>
         <th></th>
         <th></th>
       </tr>
     </thead>
 
     <tr *ngFor="let data of cart; index as i">
-      <td>{{i}}</td>
+      <td>{{i+1}}</td>
       <td>{{ data.id }}</td>
       <td><img [src]="data.product_image" alt="" /></td>
       <td>{{ data.product_name }}</td>
@@ -26,6 +27,7 @@
 
       <td>{{ data.product_prize * data.quantity | currency : "INR" }}</td>
       <td>{{ data.product_category }}</td>
+      <td>{{ currentDate |date:'medium' }}</td>
       <td>
         <button class="btn btn-danger" (click)="deleteproduct(i)">
           Delete

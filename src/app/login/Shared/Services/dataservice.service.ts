@@ -15,7 +15,7 @@ export class DataService{
     {
 
     }
-    signUp(user:any):Observable<any>
+    signUp(user:any)
     {
         return this.http.post(this.jsonUrl,user);
     }

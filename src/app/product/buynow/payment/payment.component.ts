@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class PaymentComponent {
 
-  orderid:number=678910;
+  orderid=678910;
 
 }

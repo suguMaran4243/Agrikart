@@ -13,7 +13,7 @@ export class AuthenticationService
    
       private userData='http://localhost:3000/users';
 
-     firstName:string='WELCOME';
+    
 
      
    
@@ -51,10 +51,7 @@ export class AuthenticationService
     {
         return  sessionStorage.getItem('myresponse')
     }
-    loggedInName()
-    {
-        return this.firstName;
-    }
+    
     logout()
     {
         sessionStorage.removeItem('myresponse');

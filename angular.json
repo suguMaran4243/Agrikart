@@ -4,6 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "agrikart": {
+     
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +14,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+          
             "outputPath": "dist/agrikart",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -77,6 +79,7 @@
           "options": {
             "browserTarget": "agrikart:build"
           }
+          
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -93,7 +96,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts":[],
             "karmaConfig": "karma.conf.js"
           }
         },
@@ -109,6 +112,7 @@
       }
     }
   },
+
   "cli": {
     "analytics": "30b0000a-b3bd-4210-bdcc-e19716304a7f",
     "schematicCollections": [

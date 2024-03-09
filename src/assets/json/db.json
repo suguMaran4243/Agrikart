@@ -63,32 +63,80 @@
       "pin": "621851",
       "state": "Tamil Nadu",
       "country": "India"
+    },
+    {
+      "id": "1de2",
+      "firstName": "Deepak",
+      "lastName": "K",
+      "gender": "Male",
+      "userId": "zjn",
+      "username": "deepak2134@gmail.com",
+      "password": "dkjnkjzc",
+      "phoneNumber": "0706896844",
+      "user": "Farmer",
+      "village": "Elandhaikudam",
+      "city": "Ariyalur",
+      "pin": "08787",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    {
+      "id": "ea37",
+      "firstName": "Kokila",
+      "lastName": "R",
+      "gender": "Male",
+      "userId": "2345",
+      "username": "kokila@gmail.com",
+      "password": "kokila@2004",
+      "phoneNumber": "9629332118",
+      "user": "Customer",
+      "village": "Elandhaikudam",
+      "city": "Ariyalur",
+      "pin": "621851",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    {
+      "id": "b214",
+      "firstName": "",
+      "lastName": "",
+      "gender": "",
+      "userId": "",
+      "username": "",
+      "password": "",
+      "phoneNumber": "",
+      "user": "",
+      "village": "",
+      "city": "",
+      "pin": "",
+      "state": "",
+      "country": ""
     }
   ],
   "cart": [
     {
-      "id": 202,
+      "id": "202",
       "product_name": "Lady's Finger seed",
       "product_image": "assets/images/ladysfingerseeds.jpeg",
       "product_prize": 20,
       "product_category": "seeds"
     },
     {
-      "id": 201,
+      "id": "201",
       "product_name": "Ground nut",
       "product_image": "assets/images/groundnut.jpeg",
       "product_prize": 40,
       "product_category": "seeds"
     },
     {
-      "id": 203,
+      "id": "203",
       "product_name": "Black Gram seed",
       "product_image": "assets/images/blackgramseeds.jpeg",
       "product_prize": 80.78,
       "product_category": "seeds"
     },
     {
-      "id": 204,
+      "id": "204",
       "product_name": "Maize seed",
       "product_image": "assets/images/maizeseeds.jpeg",
       "product_prize": 90,

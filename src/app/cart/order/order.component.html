@@ -9,7 +9,7 @@
       <span>Prize of {{Product.quantity}} kg/bag:</span> <p class="prize">{{Product.product_prize * Product.quantity}}</p>
       <!-- <div class="count"><span class="decrease">-</span><span class="increase" >+</span></div> -->
   
-      <button>Pay now</button>
+      <button (click)="navigatetoPayment()">Pay now</button>
     </div>
   </div>
   
