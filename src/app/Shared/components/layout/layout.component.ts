@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../Services/agriculture-products.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CartDataService } from '../../Services/cartdata.service';
+
 
 import { Product } from 'src/app/Shared/Model/product.model';
 import { HttpClient } from '@angular/common/http';
@@ -22,12 +22,11 @@ export class LayoutComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private service: ProductService,
-    private cartservice: CartDataService,
     private http: HttpClient,
     private router: Router,
     private cartService: CartServiceService
   ) {}
-
+searchProduct:string;
   /**
    * This lifecycle hook will get invoked after the componnet gets initialized
    * currentTab will gets the active route using snapshot propert
@@ -41,6 +40,8 @@ export class LayoutComponent implements OnInit {
       (x) => x.product_category === this.currentTab
     );
     this.filteredProducts = [...this.products];
+   
+   
   }
   /**
  * Adds a product to the shopping cart using the CartService.
@@ -53,11 +54,11 @@ export class LayoutComponent implements OnInit {
     this.cartService.addToCart(product);
     console.log('pushed');
   }
-  addtoCart(product: Product) {
-    this.cartservice.addTocart(product).subscribe((data) => {
-      console.log(data);
-    });
-  }
+  // addtoCart(product: Product) {
+  //   this.cartservice.addTocart(product).subscribe((data) => {
+  //     console.log(data);
+  //   });
+  // }
   /**
    * Navigates to the buyNow module using the router to the specific id
    * @param id 
@@ -75,5 +76,6 @@ export class LayoutComponent implements OnInit {
     this.filteredProducts = this.products.filter((product) =>
       product.product_name.toLowerCase().includes(keyword.toLowerCase())
     );
+
   }
 }

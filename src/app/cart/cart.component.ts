@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { CartDataService } from 'src/app/Shared/Services/cartdata.service';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Product } from '../Shared/Model/product.model';
 import { HttpClient } from '@angular/common/http';
 import { CartServiceService } from '../Shared/Services/cart-service.service';
@@ -11,7 +10,7 @@ import { DatePipe } from '@angular/common';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
 })
-export class CartComponent {
+export class CartComponent{
   @Output() cartLength = new EventEmitter<number>();
   public cart: Product[] = [];
   totalamount = 0;
@@ -29,44 +28,21 @@ export class CartComponent {
     },
   ];
   constructor(
-    private service: CartDataService,
+  
     private http: HttpClient,
     private cartService: CartServiceService,
     private router: Router
   ) {}
-
-  /*
-  Fetches product data from the CartDataServices and update the cart.
-  */
-  public fetchdata() {
-    this.service.getProducts().subscribe((data) => {
-      this.cart = data;
-    });
-  }
-
-  //Deletes entire product data in the CartdataService and updates the cart
-  public deletedata() {
-    this.service.deleteProducts().subscribe();
-  }
-
-  //Deletes particular product data in the  CartdataService and update the cart
-  public deleteProduct(id: number) {
-    this.service.deleteProduct(id).subscribe(
-      () => {
-        alert('Successfully deleted');
-      },
-      () => {
-        alert('unable to delete');
-      }
-    );
-  }
+  
+   
   /**
    * Returns and updates the cart by fetching the data from the cart service.
    * @returns{void}
    */
   getCartItems():void {
-    this.cart = this.cartService.getCartItems();
+    this.cart = this.cartService.cartItems
   }
+  
   /**
    * Deletes particular from the cart based on the id provided in the cart service
    * @param id 

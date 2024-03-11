@@ -4,7 +4,7 @@ import { OrderComponent } from './order/order.component';
 import { CartComponent } from './cart.component';
 
 const routes: Routes = [
-  { path: '', component: CartComponent },
+  { path: 'Cart', component: CartComponent },
   { path: 'Order/:id', component: OrderComponent },
 ];
 

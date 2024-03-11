@@ -1,7 +1,10 @@
+
 import { Injectable } from '@angular/core';
 import { Product } from 'src/app/Shared/Model/product.model';
 
-@Injectable()
+@Injectable({
+  providedIn:'root'
+})
 export class ProductService {
   public products: Product[] = [
     {

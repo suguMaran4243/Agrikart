@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../Shared/Services/translate.service';
+
 
 @Component({
   selector: 'app-home',
@@ -6,9 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor()
+  heading:string;
+  constructor(private translateService:TranslationService)
   {
-    console.log("Home")
+  this.heading=this.translateService.getTranslation('title')
   }
 
 }

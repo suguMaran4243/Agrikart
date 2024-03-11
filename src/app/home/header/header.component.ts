@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CartDataService } from 'src/app/Shared/Services/cartdata.service';
+import { CartServiceService } from 'src/app/Shared/Services/cart-service.service';
 import { AuthenticationService } from 'src/app/login/Shared/Services/authentication.service';
 
 
@@ -15,8 +15,10 @@ export class HeaderComponent implements OnInit {
   constructor(
     public authService: AuthenticationService,
     private router: Router,
-    private cartService: CartDataService
+    private cartService:CartServiceService
+  
   ) {}
+  cartLenth:number;
 
   /**
    *  The ngOnit will invoke after the page gets loaded
@@ -25,9 +27,8 @@ export class HeaderComponent implements OnInit {
    */
 
   ngOnInit(): void {
-    this.cartService.getProductsLength().subscribe((length) => {
-      this.cartLength = length;
-    });
+   
+   this.cartLength=this.cartService.getCartLength();
   }
   
   /**
