@@ -42,6 +42,10 @@ export class ContactComponent {
   {
     this.router.navigate(['Home'])
   }
+  submitform()
+  {
+    this.router.navigate(['Home'])
+  }
 
 
 }
