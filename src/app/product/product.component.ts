@@ -12,7 +12,7 @@ export class ProductComponent {
 
   constructor(private route: Router, private service: ProductTabService) {
     this.tabs = this.service.cardsData;
-    console.log("Hi")
+   
   }
   /**
    * Navigates to the specific route 'Agri' module ,passing an identifier as a route parameter

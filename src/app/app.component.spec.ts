@@ -1,8 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './home';
-import { FooterComponent } from './home';
-import { TranslationService } from './Shared/Services/translate.service';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;

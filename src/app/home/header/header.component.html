@@ -1,6 +1,6 @@
 <div class="navigation-bar">
   <nav>
-    <img src="assets/images/logo.png" class="logo-image" alt="">
+    <img src="assets/images/logo.png" class="logo-image" alt="" />
     <span class="logo">AgriKart</span>
     <a routerLink="Home">Home</a>
     <a routerLink="About">About</a>
@@ -9,12 +9,21 @@
 
     <div class="login">
       <button class="btn" (click)="navigateToCart()">
-        <i class="bi bi-cart" id="cart"><span class="cart-num"><sup>{{ cartLength }}</sup></span></i>
+        <i class="bi bi-cart" id="cart"
+          ><span class="cart-num"
+            ><sup>{{ cartLength }}</sup></span
+          ></i
+        >
       </button>
-      
-        <button class="btn btn-dark" *ngIf="!authService.loggedIn()"  routerLink="Login">
-          Login</button>
-      
+
+      <button
+        class="btn btn-dark"
+        *ngIf="!authService.loggedIn()"
+        routerLink="Login"
+      >
+        Login
+      </button>
+
       <button
         class="btn btn-dark"
         (click)="authService.logout()"

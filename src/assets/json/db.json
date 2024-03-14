@@ -175,6 +175,22 @@
       "pin": "621851",
       "state": "Tamil Nadu",
       "country": "India"
+    },
+    {
+      "id": "005b",
+      "firstName": "Santhosh",
+      "lastName": "S",
+      "gender": "Male",
+      "userId": "1234",
+      "username": "santhosh@gmail.com",
+      "password": "santhosh@2001",
+      "phoneNumber": "63810337730",
+      "user": "Farmer",
+      "village": "Thirumanur",
+      "city": "Ariyalur",
+      "pin": "621851",
+      "state": "Tamil Nadu",
+      "country": "India"
     }
   ],
   "cart": [

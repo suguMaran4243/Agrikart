@@ -27,8 +27,7 @@ import { TranslateModule } from '@ngx-translate/core';
     FormsModule,
     SignupModule,
     CartModule,
-    TranslateModule
-    
+    TranslateModule,
   ],
   exports: [HomeComponent, HeaderComponent, FooterComponent, LoginModule],
   providers: [AuthGuard, CanDeactivateServices],

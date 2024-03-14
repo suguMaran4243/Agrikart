@@ -4,7 +4,7 @@ import { CartComponent } from './cart.component';
 import { OrderComponent } from './order/order.component';
 import { CartRoutingModule } from './cart-routing.module';
 import { CartServiceService } from '../Shared/Services/cart-service.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({

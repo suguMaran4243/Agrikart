@@ -3,15 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './signup.component';
 
-
-const routes:Routes=[
-  {path:'',component:SignupComponent}
-]
+const routes: Routes = [{ path: '', component: SignupComponent }];
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ]
+  imports: [CommonModule, RouterModule.forChild(routes)],
 })
-export class SignupRoutingModule { }
+export class SignupRoutingModule {}

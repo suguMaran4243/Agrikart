@@ -1,8 +1,13 @@
 <h1 style="text-align: center">Agricultural Products</h1>
-<input type="search" name="" id="search" placeholder="Search products" (input)="onSearch($event)">
+<input
+  type="search"
+  name=""
+  id="search"
+  placeholder="Search products"
+  (input)="onSearch($event)"
+/>
 
 <div class="product-container">
-  
   <div class="product" *ngFor="let product of filteredProducts">
     <div>
       <h3 id="product-title">
@@ -19,7 +24,7 @@
       height="200px"
     />
     <p id="price">{{ product.product_prize | currency : "INR" }}</p>
-   
+
     <div class="buttons">
       <button class="btn btn-success" (click)="navigatetoBuynow(product.id)">
         Order

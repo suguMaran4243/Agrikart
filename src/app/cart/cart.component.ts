@@ -1,9 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component} from '@angular/core';
 import { Product } from '../Shared/Model/product.model';
 import { HttpClient } from '@angular/common/http';
 import { CartServiceService } from '../Shared/Services/cart-service.service';
 import { Router } from '@angular/router';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +10,7 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent{
-  @Output() cartLength = new EventEmitter<number>();
+
   public cart: Product[] = [];
   totalamount = 0;
   currentDate: Date = new Date();
@@ -40,7 +39,7 @@ export class CartComponent{
    * @returns{void}
    */
   getCartItems():void {
-    this.cart = this.cartService.cartItems
+    this.cart = this.cartService.getCartItems()
   }
   
   /**

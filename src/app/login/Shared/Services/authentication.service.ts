@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { Router } from '@angular/router';
-import { environment } from '../../../../environments/environment'
+import { environment } from '../../../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticationService {
-  private userData:string = environment.apiBase;
+  private userData: string = environment.apiBase;
 
   constructor(private http: HttpClient, private router: Router) {}
   authenticate(username: string, password: string): Observable<boolean> {
