@@ -66,6 +66,7 @@ export class CartComponent{
   navigatetoOrder(id: number):void {
    
     this.cartService.navigatetoOrder(id);
+    
   }
   /**
    * Calculates the total amount for all items in the cart and displays an alert.

@@ -64,7 +64,8 @@ export class LayoutComponent implements OnInit {
     console.log('HI');
     console.log(id);
     console.log(typeof id);
-    this.router.navigate(['/Buy', id]);
+    this.router.navigate(['/buy', id]);
+    console.log("")
   }
   onSearch(event: Event) {
     const inputElement = event.target as HTMLInputElement;

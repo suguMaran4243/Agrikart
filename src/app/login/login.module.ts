@@ -6,7 +6,7 @@ import { DataService } from './Shared/Services/dataservice.service';
 import { LoginComponent } from './login.component';
 import { SignupModule } from './signup/signup.module';
 import { HTTP_INTERCEPTORS,HttpClientModule } from '@angular/common/http';
-import {AuthenticationInterceptor } from '../interceptors/authentication.interceptor'
+import { AuthenticationInterceptor } from '../core/interceptors/authentication.interceptor';
 
 @NgModule({
   declarations: [LoginComponent],

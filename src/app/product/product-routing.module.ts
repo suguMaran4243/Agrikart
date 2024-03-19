@@ -13,10 +13,12 @@ const routes: Routes = [
     
   },
   {
-    path: 'Buy/:id',
+    path: 'buy/:id',
     loadChildren: () =>
       import('./buynow/buynow.module').then((m) => m.BuyNowModule),
+      canActivate:[AuthGuard]
   },
+ 
 ];
 
 @NgModule({

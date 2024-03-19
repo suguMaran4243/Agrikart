@@ -11,7 +11,6 @@ import { CartServiceService } from 'src/app/Shared/Services/cart-service.service
 export class OrderComponent implements OnInit{
 
   cartItem:Product[]=[];
- public currentTab:any;
  public Product:Product;
 
   constructor(private service:CartServiceService,private activeRoute:ActivatedRoute,private router :Router)
@@ -25,10 +24,11 @@ export class OrderComponent implements OnInit{
    * @returns{void}
    */
   ngOnInit(): void {
-    this.currentTab=this.activeRoute.snapshot.paramMap.get('id');
-   this.Product= this.service.cartItems.at(this.currentTab)
+   
+  if (this.activeRoute.snapshot.paramMap.get('id')) {
+    this.Product= this.service.cartItems.at(parseInt(this.activeRoute.snapshot.paramMap.get('id')))
     console.log(this.Product)
-    
+  }
   }
   /**
    * 
@@ -37,6 +37,7 @@ export class OrderComponent implements OnInit{
   navigatetoPayment()
   {
     this.router.navigate(['Payment'])
+   this.service.deleteFromCart(parseInt(this.activeRoute.snapshot.paramMap.get('id')))
   }
 
 }

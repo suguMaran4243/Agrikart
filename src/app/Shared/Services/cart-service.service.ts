@@ -6,19 +6,16 @@ import { BehaviorSubject} from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class CartServiceService implements OnInit {
+export class CartServiceService{
   public cartItems: Product[] = [];
-  public cartLength;
-  public cartItemsSubject: BehaviorSubject<number>=new BehaviorSubject<number>(0);
+  public cartLength:number;
+  public cartItemsSubject: BehaviorSubject<number>=new BehaviorSubject<number>(this.cartItems.length);
   constructor(private router: Router) {
-    this.fetchLocalStorage();
-    this.cartLength = this.cartItems.length;
-    this.cartItemsSubject.next(this.cartLength)
-  }
-  ngOnInit(): void {
    
-    console.log(this.cartLength)
+    this.fetchLocalStorage();
+    this.cartItemsSubject.next(this.cartItems.length)
   }
+ 
   
   
   
@@ -69,6 +66,6 @@ export class CartServiceService implements OnInit {
 
   navigatetoOrder(id: number) {
     // const itemid=this.cartItems.at(id).id;
-    this.router.navigate(['/Order', id]);
+    this.router.navigate(['/order', id]);
   }
 }

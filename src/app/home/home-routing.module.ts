@@ -11,28 +11,31 @@ import { AuthGuard } from '../login/Shared/Guard/auth.guard';
 import { CanDeactivateServices } from '../contact/Shared/Services/canDeactivate.services';
 import { NotfoundComponent } from '../notfound/notfound.component';
 
+
 const routes: Routes = [
-  // {path:'',component:HomeComponent},
-  { path: 'Home', component: HomeComponent },
-  { path: 'About', component: AboutComponent },
-  { path: 'Product', component: ProductComponent },
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'product', component: ProductComponent },
   {
-    path: 'Contact',
+    path: 'contact',
     component: ContactComponent,
     canDeactivate: [CanDeactivateServices],
   },
 
   {
-    path: 'Cart',
+    path: 'cart',
     loadChildren: () =>
       import('src/app/cart/cart.module').then((m) => m.CartModule),
-    canActivate: [AuthGuard],
+      canActivate: [AuthGuard],
+    
   },
-  { path: 'Login', component: LoginComponent },
+  { path: 'login', component: LoginComponent},
   {
-    path: 'Signup',
+    path: 'signup',
     loadChildren: () =>
       import('src/app/login/signup/signup.module').then((m) => m.SignupModule),
+      
   },
   { path: '**', component: NotfoundComponent },
 ];

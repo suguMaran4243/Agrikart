@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TranslationService {
+export class TranslationService implements TranslateLoader {
 
   constructor(private translate:TranslateService) {
     this.translate.setDefaultLang('en');
@@ -14,7 +14,7 @@ export class TranslationService {
    {
     this.translate.use(language)
    }
-   getTranslation(key:string):string
+   getTranslation(key:string)
    {
     return this.translate.instant(key)
    }

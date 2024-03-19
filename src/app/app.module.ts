@@ -12,6 +12,7 @@ import { HomeModule } from './home/home.module';
 import {
   TranslateLoader,
   TranslateModule,
+  TranslateService,
 } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslationService } from './Shared/Services/translate.service';
@@ -23,6 +24,7 @@ import { TranslationService } from './Shared/Services/translate.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    // HttpClient,
     LoginModule,
     ProductModule,
     HomeModule,
@@ -35,7 +37,7 @@ import { TranslationService } from './Shared/Services/translate.service';
       },
     }),
   ],
-  providers: [ProductService, TranslationService],
+  providers: [ProductService],
   bootstrap: [AppComponent],
   exports: [TranslateModule],
 })

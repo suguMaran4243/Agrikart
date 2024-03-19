@@ -36,6 +36,6 @@ export class AuthenticationService {
 
   logout() {
     sessionStorage.removeItem('myresponse');
-    this.router.navigate(['Login']);
+    this.router.navigate(['login']);
   }
 }

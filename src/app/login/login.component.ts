@@ -19,7 +19,13 @@ export class LoginComponent implements OnInit {
     public authService: AuthenticationService,
     public router: Router
    
-  ) {}
+  ) {
+   if( this.authService.loggedIn())
+   {
+    this.router.navigate(['home'])
+   }
+   
+  }
 
   /**
    * This lifecycle hook is called after the component is initialized
@@ -39,6 +45,7 @@ export class LoginComponent implements OnInit {
   * @returns {void}
   */
   Login() :void {
+
     this.username = this.loginForm.get('username').value;
     this.password = this.loginForm.get('password').value;
     this.authService
@@ -46,10 +53,10 @@ export class LoginComponent implements OnInit {
       .subscribe((authenticated: any) => {
         if (authenticated) {
           alert('login successfull');
-          this.router.navigate(['Home']);
+          this.router.navigate(['home']);
         } else {
           alert('Please signup before login');
-          this.router.navigate(['Signup']);
+          this.router.navigate(['signup']);
         }
       });
    
@@ -59,6 +66,6 @@ export class LoginComponent implements OnInit {
    * @returns {void}
    */
   navigateToSignup() :void {
-    this.router.navigate(['Signup']);
+    this.router.navigate(['signup']);
   }
 }

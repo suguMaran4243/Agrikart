@@ -31,14 +31,10 @@ export class HeaderComponent{
    * @returns {void}
    */
   
-   
-  
-  /**
-   * Navigates to the Cart page using the router [routerLink='Home']
-   * @returns {void}
-   */
-  navigateToCart(): void {
-    this.router.navigate(['Cart']);
+  logout()
+  {
+    this.authService.logout();
+    this.cartService.clearProducts();
   }
   
 }

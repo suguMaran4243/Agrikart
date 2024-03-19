@@ -10,7 +10,7 @@ import { SignupModule } from '../login/signup/signup.module';
 import { CanDeactivateServices } from '../contact/Shared/Services/canDeactivate.services';
 import { CartModule } from '../cart/cart.module';
 import { NotfoundComponent } from '../notfound/notfound.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -30,6 +30,6 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule,
   ],
   exports: [HomeComponent, HeaderComponent, FooterComponent, LoginModule],
-  providers: [AuthGuard, CanDeactivateServices],
+  providers: [AuthGuard, CanDeactivateServices,TranslateService],
 })
 export class HomeModule {}

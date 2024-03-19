@@ -20,7 +20,7 @@ export class SignupComponent {
   ) {
     console.log('signup');
     this.signupForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
+      firstName: ['', Validators.required,Validators.pattern("a-z")],
       lastName: ['', Validators.required],
       gender: ['', Validators.required],
       userId: ['', Validators.required],
