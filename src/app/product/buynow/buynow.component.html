@@ -5,9 +5,13 @@
     <p>
       <img [src]="product.product_image" alt="" />
     </p>
-   
-    <span>Prize of {{product.product_name}} {{countValue}} kg/bag:</span> <p class="prize">{{ product.product_prize *countValue }}</p>
-    <div class="count"><span class="decrease" (click)="decrement()">-</span>{{countValue}}<span class="increase" (click)="increment()">+</span></div>
+
+    <span>Prize of {{ product.product_name }} {{ countValue }} kg/bag:</span>
+    <p class="prize">{{ product.product_prize * countValue }}</p>
+    <div class="count">
+      <span class="decrease" (click)="decrement()">-</span>{{ countValue
+      }}<span class="increase" (click)="increment()">+</span>
+    </div>
 
     <button (click)="navigateToPayment()">Pay now</button>
   </div>

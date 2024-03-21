@@ -38,7 +38,10 @@ input[type="submit"] {
   margin: 40px;
   font-size: 20px;
 }
-small
-{
+small {
   color: red;
+}
+input.ng-invalid.ng-touched
+{
+    border: 2px solid red;
 }

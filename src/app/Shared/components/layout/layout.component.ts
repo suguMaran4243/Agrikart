@@ -51,11 +51,7 @@ export class LayoutComponent implements OnInit {
     this.cartService.addToCart(product);
     console.log('pushed');
   }
-  // addtoCart(product: Product) {
-  //   this.cartservice.addTocart(product).subscribe((data) => {
-  //     console.log(data);
-  //   });
-  // }
+
   /**
    * Navigates to the buyNow module using the router to the specific id
    * @param id
@@ -65,7 +61,7 @@ export class LayoutComponent implements OnInit {
     console.log(id);
     console.log(typeof id);
     this.router.navigate(['/buy', id]);
-    console.log("")
+    console.log('');
   }
   onSearch(event: Event) {
     const inputElement = event.target as HTMLInputElement;

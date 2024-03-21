@@ -1,71 +1,56 @@
-#top-heading
-{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500;
-     padding: 20px;
+#top-heading {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  padding: 20px;
 }
-#product-container
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin-top: 80px;
-   
-  
-   
-    
+#product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+ 
+  position: fixed;
 }
 #product
-{
-    width: 450px;
-    border: 1px solid;
-    margin: 5px;
-  
-   
+ {
+  width: 450px;
+  box-shadow: rgba(150, 220, 144, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin: 15px;
 }
-img
-{
-    margin: 20px;
+img {
+  margin: 20px;
 }
 
-.product-content p{
-    line-height: 30px;
+.product-content p {
+  line-height: 30px;
 }
-.card-button
-{
-   margin: 0 auto;
+.card-button {
+  margin: 0 auto;
 }
- button
-{
-    text-align: center;
-    width: 170px;
-    margin: 20px;
-    font-size: 20px;
-    bottom: 0;
+button {
+  text-align: center;
+  width: 170px;
+  margin: 20px;
+  font-size: 20px;
+  bottom: 0;
 }
-#father-agri
-{
-    width: 70%;
-    margin: 10px;
-    
+#father-agri {
+  width: 80%;
+  /* margin: 10px; */
 }
-#father-agri img
-{
-     width:"160px";
-     height:"160px";
-     border-radius: 10%;
+#father-agri img {
+  width: "150px";
+  height: "150px";
+  border-radius: 10%;
 }
-#father-about
-{
-    padding: 10px;
-    margin: 40px;
-    font-size: 20px;
-    
+#father-about {
+  padding: 10px;
+  margin: 40px;
+  font-size: 20px;
 }
-#father-about h1
-{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
+#father-about h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
 }

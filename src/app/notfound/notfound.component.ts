@@ -4,20 +4,14 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-notfound',
   templateUrl: './notfound.component.html',
-  styleUrls: ['./notfound.component.css']
+  styleUrls: ['./notfound.component.css'],
 })
 export class NotfoundComponent {
-
-  constructor(private router:Router)
-  {
-
-  }
+  constructor(private router: Router) {}
   /**
    * Navigates to Home using the router.
    */
-  navigateToHome()
-  {
-    this.router.navigate(['home'])
+  navigateToHome() {
+    this.router.navigate(['home']);
   }
-
 }

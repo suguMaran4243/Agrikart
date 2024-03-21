@@ -9,12 +9,12 @@
 a {
   text-decoration: none;
   padding: 30px;
-  font-size: 30px;
+  font-size: 25px;
   color: black;
 }
 .appName {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 40px;
+  font-size: 30px;
 }
 .login {
   float: right;
@@ -41,4 +41,8 @@ a {
   height: 100px;
   margin: 0px;
   padding: 0px;
+}
+.active
+{
+  background-color: rgba(231, 202, 202, 0.26);
 }

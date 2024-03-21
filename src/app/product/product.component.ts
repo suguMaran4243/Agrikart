@@ -12,15 +12,14 @@ export class ProductComponent {
 
   constructor(private route: Router, private service: ProductTabService) {
     this.tabs = this.service.cardsData;
-   
   }
   /**
    * Navigates to the specific route 'Agri' module ,passing an identifier as a route parameter
    * Uses Angular router to a specified route
-   * @param id 
+   * @param id
    * @returns {void}
    */
-  public navigateto(id: string) :void{
+  public navigateTo(id: string): void {
     this.route.navigate(['/Agri', id]);
   }
 }

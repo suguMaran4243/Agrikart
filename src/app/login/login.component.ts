@@ -5,7 +5,6 @@ import { Validators } from '@angular/forms';
 import { AuthenticationService } from './Shared/Services/authentication.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,13 +17,10 @@ export class LoginComponent implements OnInit {
   constructor(
     public authService: AuthenticationService,
     public router: Router
-   
   ) {
-   if( this.authService.loggedIn())
-   {
-    this.router.navigate(['home'])
-   }
-   
+    if (this.authService.loggedIn()) {
+      this.router.navigate(['home']);
+    }
   }
 
   /**
@@ -38,14 +34,13 @@ export class LoginComponent implements OnInit {
       password: new FormControl(null, [Validators.required]),
     });
   }
- /**
-  * Initiates the login process by extracting the username and password from the login form
-  * Calls the authenticate method from authentication service to verify credentials
-  * Display alert based on the result
-  * @returns {void}
-  */
-  Login() :void {
-
+  /**
+   * Initiates the login process by extracting the username and password from the login form
+   * Calls the authenticate method from authentication service to verify credentials
+   * Display alert based on the result
+   * @returns {void}
+   */
+  Login(): void {
     this.username = this.loginForm.get('username').value;
     this.password = this.loginForm.get('password').value;
     this.authService
@@ -59,13 +54,12 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['signup']);
         }
       });
-   
   }
   /**
    * Navigates to the Signup page using the router ['Signup]
    * @returns {void}
    */
-  navigateToSignup() :void {
+  navigateToSignup(): void {
     this.router.navigate(['signup']);
   }
 }

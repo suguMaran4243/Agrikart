@@ -10,13 +10,13 @@ import { ProductService } from 'src/app/Shared/Services/agriculture-products.ser
 })
 export class BuynowComponent implements OnInit {
   private currentTab: number;
- public product:Product;
- public countValue=1;
+  public product: Product;
+  public countValue = 1;
 
   constructor(
     private activeRoute: ActivatedRoute,
     private service: ProductService,
-    private router:Router
+    private router: Router
   ) {
     console.log('called');
   }
@@ -35,29 +35,24 @@ export class BuynowComponent implements OnInit {
    * Increases the count value by one.
    * @returns {void}
    */
-  increment():void
-  {
-      this.countValue++;
+  increment(): void {
+    this.countValue++;
   }
   /**
    * Decrements the value of the 'counterValue' property
    * Decreases the count value by one
    * @returns {void}
    */
-  decrement():void
-  {
-    if(this.countValue>1)
-    this.countValue--;
-  else
-  {
-    alert('Minimum quantity should be >1')
-  }
+  decrement(): void {
+    if (this.countValue > 1) this.countValue--;
+    else {
+      alert('Minimum quantity should be >1');
+    }
   }
   /**
    * Navigates to the payment page using router
    */
-  navigateToPayment()
-  {
-    this.router.navigate(['payment'])
+  navigateToPayment() {
+    this.router.navigate(['payment']);
   }
 }

@@ -11,27 +11,23 @@ import { TranslateService } from '@ngx-translate/core';
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
   let component: AppComponent;
-
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent,HeaderComponent,FooterComponent],
-      providers:[AuthenticationService,ProductService,HttpClient,HttpHandler,TranslationService,TranslateService],
-      imports:[
-        AppRoutingModule
-      ]
+      declarations: [AppComponent, HeaderComponent, FooterComponent],
+      providers: [
+        AuthenticationService,
+        ProductService,
+        HttpClient,
+        HttpHandler,
+        TranslationService,
+        TranslateService,
+      ],
+      imports: [AppRoutingModule],
     });
-
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
   });
-
   it('should create the app', () => {
     expect(component).toBeTruthy();
   });
-
-  
-
-  
-
- 
 });

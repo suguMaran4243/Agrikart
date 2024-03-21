@@ -5,20 +5,17 @@ import { AuthGuard } from '../login/Shared/Guard/auth.guard';
 
 const routes: Routes = [
   { path: '', component: ProductComponent },
-
   {
     path: 'Agri/:id',
     loadChildren: () => import('./agri/agri.module').then((m) => m.AgriModule),
-    canActivate:[AuthGuard]
-    
+    canActivate: [AuthGuard],
   },
   {
     path: 'buy/:id',
     loadChildren: () =>
       import('./buynow/buynow.module').then((m) => m.BuyNowModule),
-      canActivate:[AuthGuard]
+    canActivate: [AuthGuard],
   },
- 
 ];
 
 @NgModule({

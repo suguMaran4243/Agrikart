@@ -33,7 +33,7 @@ export class CartComponent{
     private router: Router
   ) {}
   
-   
+  
   /**
    * Returns and updates the cart by fetching the data from the cart service.
    * @returns{void}
@@ -47,9 +47,12 @@ export class CartComponent{
    * @param id 
    * @returns{void}
    */
+  
   deleteproduct(id: number) :void{
     console.log(id);
     this.cartService.deleteFromCart(id);
+   
+   
   }
   /**
    * Clear all products in the cart in the cart service

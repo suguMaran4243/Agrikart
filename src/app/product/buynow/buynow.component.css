@@ -1,50 +1,43 @@
-.product
-{
-    width: 400px;
-    margin: 140px auto;
-    border: 3px solid;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    border-radius: 10px;
+.product {
+  width: 400px;
+  margin: 140px auto;
+  border: 3px solid;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
 }
-.content
-{
-    color: green;
-    font-size: 20px;
-    font-weight: 600;
+.content {
+  color: green;
+  font-size: 20px;
+  font-weight: 600;
 }
-.heading
-{
-    font-style: italic;
+.heading {
+  font-style: italic;
 }
-.prize
-{
-    color: red;
-    font-size: 30px;
-    font-weight:800;
+.prize {
+  color: red;
+  font-size: 30px;
+  font-weight: 800;
 }
-.count
-{
-    font-size: 20px;
-    font-weight: 800;
+.count {
+  font-size: 20px;
+  font-weight: 800;
 }
-.count span{
-    padding: 5px;
-    margin: 10px;
-    /* background-color: greenyellow; */
-    border: 1px solid;
-    border-radius: 150%;
-    cursor: pointer;
-    
+.count span {
+  padding: 5px;
+  margin: 10px;
+  /* background-color: greenyellow; */
+  border: 1px solid;
+  border-radius: 150%;
+  cursor: pointer;
 }
-button
-{
-    margin: 20px;
-    padding: 15px;
-    width: 40%;
-    background-color: rgb(239, 239, 96);
-    font-size: 20px;
-    font-weight: 400;
-    border: none;
+button {
+  margin: 20px;
+  padding: 15px;
+  width: 40%;
+  background-color: rgb(239, 239, 96);
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
 }

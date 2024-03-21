@@ -5,7 +5,7 @@ import { CartComponent } from './cart.component';
 import { AuthGuard } from '../login/Shared/Guard/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: CartComponent},
+  { path: 'cart', component: CartComponent,canActivate:[AuthGuard]},
   { path: 'order/:id', component: OrderComponent,canActivate:[AuthGuard] },
 ];
 

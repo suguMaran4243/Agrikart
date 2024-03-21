@@ -4,16 +4,11 @@ import { CartComponent } from './cart.component';
 import { OrderComponent } from './order/order.component';
 import { CartRoutingModule } from './cart-routing.module';
 import { CartServiceService } from '../Shared/Services/cart-service.service';
-import {HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [CartComponent, OrderComponent],
-  imports: [
-    CommonModule,
-    CartRoutingModule,
-    HttpClientModule
-  ],
-  providers:[CartServiceService]
+  imports: [CommonModule, CartRoutingModule, HttpClientModule],
+  providers: [CartServiceService],
 })
-export class CartModule { }
+export class CartModule {}

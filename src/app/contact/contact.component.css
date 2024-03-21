@@ -1,10 +1,8 @@
-h1
-{
+h1 {
   margin-top: 80px;
 }
-.container
-{
-  width:500px;
+.container {
+  width: 500px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   margin: 0 auto;
   padding: 40px;
@@ -34,49 +32,35 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
-.address
-{
+.address {
   margin-top: 80px;
   /* border: 1px solid; */
-  
-
 }
-.address img{
-width: 900px;
-height: 400px;
+.address img {
+  width: 900px;
+  height: 400px;
 }
-.location
-{
+.location {
   /* border: 1px solid; */
   margin-top: 50px;
   background-color: rgba(208, 248, 208, 0.131);
-
-}.location h3{
+}
+.location h3 {
   text-align: center;
 }
-.addressitems
-{
+.addressitems {
   display: flex;
   text-align: center;
-  
- 
 }
-.addres
-{
+.addres {
   width: 400px;
   height: 300px;
   /* border: 1px solid; */
- 
-  
-
-  
 }
-.addres i{
+.addres i {
   font-size: 40px;
-
 }
-.addres p
-{
+.addres p {
   font-size: 20px;
   font-style: italic;
 }

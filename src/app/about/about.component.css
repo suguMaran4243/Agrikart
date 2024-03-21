@@ -1,4 +1,22 @@
 .about
 {
     margin-top: 80px;
+
+}
+.agrikart
+{
+    width: 1000px;
+    height: 500px;
+    margin: 200px auto;
+    box-shadow: rgba(175, 235, 164, 0.56) 0px 22px 70px 4px;
+
+}
+.agrikart h1{
+    text-align: center;
+}
+.agrikart p{
+    padding: 10px;
+    line-height: 30px;
+    font-style: italic;
+    margin: 10px;
 }

@@ -10,6 +10,12 @@ export class AuthenticationService {
   private userData: string = environment.apiBase;
 
   constructor(private http: HttpClient, private router: Router) {}
+  /**
+   * This method will authenticate with the json server and check whether username and password are correct
+   * @param username
+   * @param password
+   * @returns {boolean}
+   */
   authenticate(username: string, password: string): Observable<boolean> {
     return this.http.get<any[]>(`${this.userData}/users`).pipe(
       map((users) => {
@@ -30,6 +36,10 @@ export class AuthenticationService {
       })
     );
   }
+  /**
+   * This method will check whether the user is logged in or not if loggedin it returns the usernname
+   * @returns
+   */
   loggedIn() {
     return sessionStorage.getItem('myresponse');
   }

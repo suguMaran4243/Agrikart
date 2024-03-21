@@ -20,12 +20,12 @@ export class SignupComponent {
   ) {
     console.log('signup');
     this.signupForm = this.formBuilder.group({
-      firstName: ['', Validators.required,Validators.pattern("a-z")],
-      lastName: ['', Validators.required],
+      firstName: ['', [Validators.required,Validators.minLength(3)]],
+      lastName: ['', [Validators.required,Validators.maxLength(1)]],
       gender: ['', Validators.required],
-      userId: ['', Validators.required],
+      userId: ['', [Validators.required,Validators.pattern('^\s*[0-9]+\s*$')]],
       username: ['', Validators.required],
-      password: ['', Validators.required],
+      password: ['', Validators.required, ],
       phoneNumber: ['', Validators.required],
       user: ['', Validators.required],
       village: ['', Validators.required],
@@ -55,6 +55,6 @@ export class SignupComponent {
       .subscribe((response) => {
         console.log(response);
       });
-    this.router.navigate(['./Login']);
+    this.router.navigate(['login']);
   }
 }

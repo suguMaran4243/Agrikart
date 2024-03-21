@@ -27,7 +27,7 @@ const routes: Routes = [
     path: 'cart',
     loadChildren: () =>
       import('src/app/cart/cart.module').then((m) => m.CartModule),
-      canActivate: [AuthGuard],
+    
     
   },
   { path: 'login', component: LoginComponent},

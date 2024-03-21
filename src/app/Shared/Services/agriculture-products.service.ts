@@ -1,9 +1,8 @@
-
 import { Injectable } from '@angular/core';
 import { Product } from 'src/app/Shared/Model/product.model';
 
 @Injectable({
-  providedIn:'root'
+  providedIn: 'root',
 })
 export class ProductService {
   public products: Product[] = [
@@ -12,7 +11,7 @@ export class ProductService {
       product_name: 'Paddy',
       product_image: 'assets/images/paddy.png',
       product_prize: 400,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
     {
@@ -20,7 +19,7 @@ export class ProductService {
       product_name: 'Maize',
       product_image: 'assets/images/maize.jpeg',
       product_prize: 800,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
     {
@@ -28,7 +27,7 @@ export class ProductService {
       product_name: 'Sugarcane',
       product_image: 'assets/images/sugarcane.jpeg',
       product_prize: 2000,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
     {
@@ -36,7 +35,7 @@ export class ProductService {
       product_name: 'Blackgram',
       product_image: 'assets/images/blackgram.jpeg',
       product_prize: 400,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
     {
@@ -44,7 +43,7 @@ export class ProductService {
       product_name: 'Mung Bean',
       product_image: 'assets/images/mungbean.jpeg',
       product_prize: 500,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
     {
@@ -52,7 +51,7 @@ export class ProductService {
       product_name: 'Sesame',
       product_image: 'assets/images/sesame.jpeg',
       product_prize: 200,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
     {
@@ -60,7 +59,7 @@ export class ProductService {
       product_name: 'Wheat',
       product_image: 'assets/images/wheat.jpeg',
       product_prize: 200,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
     {
@@ -68,7 +67,7 @@ export class ProductService {
       product_name: 'Pearl Millet',
       product_image: 'assets/images/pearlmillet.jpeg',
       product_prize: 300,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
     {
@@ -76,7 +75,7 @@ export class ProductService {
       product_name: 'Coconut',
       product_image: 'assets/images/coconut.jpeg',
       product_prize: 20,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
     {
@@ -84,7 +83,7 @@ export class ProductService {
       product_name: 'Brinjal',
       product_image: 'assets/images/brinjal.jpeg',
       product_prize: 40,
-      quantity:1,
+      quantity: 1,
       product_category: 'agri',
     },
 
@@ -94,7 +93,7 @@ export class ProductService {
       product_name: 'Ground nut',
       product_image: 'assets/images/groundnut.jpeg',
       product_prize: 40,
-      quantity:1,
+      quantity: 1,
       product_category: 'seeds',
     },
     {
@@ -102,7 +101,7 @@ export class ProductService {
       product_name: "Lady's Finger seed",
       product_image: 'assets/images/ladysfingerseeds.jpeg',
       product_prize: 20,
-      quantity:1,
+      quantity: 1,
       product_category: 'seeds',
     },
     {
@@ -110,7 +109,7 @@ export class ProductService {
       product_name: 'Black Gram seed',
       product_image: 'assets/images/blackgramseeds.jpeg',
       product_prize: 80.78,
-      quantity:1,
+      quantity: 1,
       product_category: 'seeds',
     },
     {
@@ -118,7 +117,7 @@ export class ProductService {
       product_name: 'Maize seed',
       product_image: 'assets/images/maizeseeds.jpeg',
       product_prize: 90,
-      quantity:1,
+      quantity: 1,
       product_category: 'seeds',
     },
 
@@ -129,7 +128,7 @@ export class ProductService {
       product_name: 'Urea',
       product_image: 'assets/images/urea.png',
       product_prize: 400,
-      quantity:1,
+      quantity: 1,
       product_category: 'fertilizer',
     },
     {
@@ -137,7 +136,7 @@ export class ProductService {
       product_name: 'Potassium',
       product_image: 'assets/images/pottasium.jpeg',
       product_prize: 700,
-      quantity:1,
+      quantity: 1,
       product_category: 'fertilizer',
     },
     {
@@ -145,7 +144,7 @@ export class ProductService {
       product_name: 'Sulphate',
       product_image: 'assets/images/sulphate.jpeg',
       product_prize: 1200,
-      quantity:1,
+      quantity: 1,
       product_category: 'fertilizer',
     },
     {
@@ -153,7 +152,7 @@ export class ProductService {
       product_name: 'Calcium Nitrate',
       product_image: 'assets/images/calciumnitrate.jpeg',
       product_prize: 1400,
-      quantity:1,
+      quantity: 1,
       product_category: 'fertilizer',
     },
     {
@@ -161,7 +160,7 @@ export class ProductService {
       product_name: 'Phytocil',
       product_image: 'assets/images/phytocil.png',
       product_prize: 1700,
-      quantity:1,
+      quantity: 1,
       product_category: 'fertilizer',
     },
     {
@@ -169,7 +168,7 @@ export class ProductService {
       product_name: 'Atonik',
       product_image: 'assets/images/atonik.png',
       product_prize: 500,
-      quantity:1,
+      quantity: 1,
       product_category: 'fertilizer',
     },
     {
@@ -177,7 +176,7 @@ export class ProductService {
       product_name: 'Vermicompost',
       product_image: 'assets/images/vermicompost.jpeg',
       product_prize: 1200,
-      quantity:1,
+      quantity: 1,
       product_category: 'fertilizer',
     },
     {
@@ -185,7 +184,7 @@ export class ProductService {
       product_name: 'Granular',
       product_image: 'assets/images/granular.jpg',
       product_prize: 500,
-      quantity:1,
+      quantity: 1,
       product_category: 'fertilizer',
     },
     {
@@ -193,7 +192,7 @@ export class ProductService {
       product_name: 'Cow Dung',
       product_image: 'assets/images/cowmanure.jpeg',
       product_prize: 5000,
-      quantity:1,
+      quantity: 1,
       product_category: 'fertilizer',
     },
   ];

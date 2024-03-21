@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule  } from '@angular/common/http';
 import { CartComponent } from './cart.component';
-import { TranslateService } from '@ngx-translate/core';
+
 
 describe('CartComponent', () => {
   let component: CartComponent;

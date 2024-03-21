@@ -1,11 +1,9 @@
-.payment
-{
-    /* margin-top:80px; */
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
+.payment {
+  
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
-.top
-{
-    margin-top:80px;
+.top {
+  margin-top: 80px;
 }

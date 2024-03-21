@@ -7,15 +7,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
 import { ProductService } from './Shared/Services/agriculture-products.service';
 import { ProductModule } from './product/product.module';
-
 import { HomeModule } from './home/home.module';
 import {
   TranslateLoader,
   TranslateModule,
-  TranslateService,
+  
 } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslationService } from './Shared/Services/translate.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +22,6 @@ import { TranslationService } from './Shared/Services/translate.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // HttpClient,
     LoginModule,
     ProductModule,
     HomeModule,
