@@ -21,7 +21,7 @@ export class AuthenticationInterceptor implements HttpInterceptor {
       // alert("Interceptor made")
       request = request.clone({
         setHeaders: {
-          Authorization: `Loggin ${myresponse}`,
+          Authorization: `Login ${myresponse}`,
         },
       });
     }

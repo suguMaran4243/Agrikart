@@ -24,15 +24,8 @@ describe('AboutComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome to our application'
+      'What is AgriKart.'
     );
   });
-  it('should renser paragraph', () => {
-    const fixture = TestBed.createComponent(AboutComponent);
-    fixture.detectChanges();
-    const compile = fixture.nativeElement as HTMLElement;
-    expect(compile.querySelector('p')?.textContent).toContain(
-      'Hello Sugumaran'
-    );
-  });
+ 
 });

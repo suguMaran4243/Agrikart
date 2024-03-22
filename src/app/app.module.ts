@@ -11,7 +11,6 @@ import { HomeModule } from './home/home.module';
 import {
   TranslateLoader,
   TranslateModule,
-  
 } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
