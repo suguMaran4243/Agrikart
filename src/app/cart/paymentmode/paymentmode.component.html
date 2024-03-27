@@ -1,0 +1,57 @@
+<div class="payment-options">
+    <h2>Choose Payment Method</h2>
+    <div class="payment-buttons">
+        <div>
+            <button type="button" class="payment-button" (click)="selectPaymentMethod('upi')">UPI<i class="bi bi-currency-rupee"></i></button>
+          </div>
+          <div>
+            <button type="button" class="payment-button" (click)="selectPaymentMethod('creditCard')">Credit Card <i class="bi bi-credit-card"></i></button>
+          </div>
+          <div>
+            <button type="button" class="payment-button" (click)="selectPaymentMethod('cashOnDelivery')">Cash on Delivery <i class="bi bi-cash"></i></button>
+          </div>
+    </div>
+    
+
+  
+  <div class="payment-details" *ngIf="selectedPaymentMethod === 'upi'">
+    <!-- UPI payment details form -->
+    <h3>UPI Payment Details</h3>
+    <div>
+      <label for="payee">Name</label>
+      <input type="text" name="" id="payee">
+    </div>
+    <div>
+      <label for="phonenum">Phone number</label>
+      <input type="tel" name="" id="phonenum">
+    </div>
+    <div>
+      <label for="upiId">UPI ID:</label>
+      <input type="text" id="upiId" [(ngModel)]="upiId">
+    </div>
+
+    <button (click)="processPayment()">Proceed to Payment</button>
+  </div>
+  
+  <div class="payment-details" *ngIf="selectedPaymentMethod === 'creditCard'">
+    <!-- Credit card payment details form -->
+    <h3>Credit Card Payment Details</h3>
+    <div>
+      <label for="cardNumber">Card Number:</label>
+      <input type="text" id="cardNumber" [(ngModel)]="cardNumber">
+    </div>
+    <div>
+      <label for="expiryDate">Expiry Date:</label>
+      <input type="month" id="expiryDate" [(ngModel)]="expiryDate">
+    </div>
+    <div>
+      <label for="cvv">CVV:</label>
+      <input type="number" id="cvv" [(ngModel)]="cvv">
+    </div>
+    <button (click)="processPayment()">Proceed to Payment</button>
+</div>
+
+</div>
+  
+ 
+  

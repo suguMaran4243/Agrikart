@@ -39,5 +39,6 @@ export class OrderComponent implements OnInit{
     this.router.navigate(['payment'])
    this.service.deleteFromCart(parseInt(this.activeRoute.snapshot.paramMap.get('id')))
   }
+ 
 
 }
