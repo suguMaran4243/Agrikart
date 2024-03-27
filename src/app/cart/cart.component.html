@@ -1,7 +1,7 @@
 <div class="cart-items">
   <h2>Cart Items</h2>
   <button (click)="getCartItems()" class="btn btn-success">Show Cart</button>
-  <button (click)="cleardata()" class="btn btn-danger">Delete</button>
+  <button (click)="clearProducts()" class="btn btn-danger">Delete</button>
   <table>
     <thead>
       <tr *ngFor="let head of tableHeaders">
@@ -29,19 +29,19 @@
       <td>{{ data.product_category }}</td>
       <td>{{ currentDate |date:'medium' }}</td>
       <td>
-        <button class="btn btn-danger" (click)="deleteproduct(i)">
+        <button class="btn btn-danger" (click)="deleteProduct(i)">
           Delete
         </button>
       </td>
       <td>
-        <button class="btn btn-success" (click)="navigatetoOrder(i)">
+        <button class="btn btn-success" (click)="navigateToOrder(i)">
           Buy now
         </button>
       </td>
     </tr>
   </table>
   <div class="buyall">
-    <button class="btn btn-success" (click)="buyall()" id="buyall">Buy all</button>
+    <button class="btn btn-success" (click)="buyAll()" id="buyall">Buy all</button>
   </div>
  
 </div>

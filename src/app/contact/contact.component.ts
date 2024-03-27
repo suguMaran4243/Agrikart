@@ -37,8 +37,8 @@ export class ContactComponent {
    * Navigates to the Home page using the router ['Home']
    * @returns{void}
    */
-  
- public submitform():void {
+
+  public submitForm(): void {
     this.router.navigate(['home']);
   }
 }

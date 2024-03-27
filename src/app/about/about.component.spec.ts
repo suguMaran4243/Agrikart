@@ -27,5 +27,4 @@ describe('AboutComponent', () => {
       'What is AgriKart.'
     );
   });
- 
 });

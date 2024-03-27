@@ -7,7 +7,7 @@ import { TranslationService } from '../Shared/Services/translate.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  heading: string;
+ public heading: string;
   constructor(private translateService: TranslationService) {
     this.heading = this.translateService.getTranslation('title');
   }

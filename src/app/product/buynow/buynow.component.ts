@@ -53,6 +53,6 @@ export class BuynowComponent implements OnInit {
    * Navigates to the payment page using router
    */
   navigateToPayment() {
-    this.router.navigate(['payment']);
+    this.router.navigate(['paymode']);
   }
 }

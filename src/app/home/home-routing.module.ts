@@ -13,14 +13,14 @@ import { NotfoundComponent } from '../notfound/notfound.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent,title:'Agrikart-Home' },
-  { path: 'about', component: AboutComponent,title:'Agrikart-About'},
-  { path: 'product', component: ProductComponent,title:'Agrikart-Product'},
+  { path: 'home', component: HomeComponent, title: 'Agrikart-Home' },
+  { path: 'about', component: AboutComponent, title: 'Agrikart-About' },
+  { path: 'product', component: ProductComponent, title: 'Agrikart-Product' },
   {
     path: 'contact',
     component: ContactComponent,
     canDeactivate: [CanDeactivateServices],
-    title:'Agrikart-Contact'
+    title: 'Agrikart-Contact',
   },
 
   {
@@ -28,14 +28,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('src/app/cart/cart.module').then((m) => m.CartModule),
     canActivate: [AuthGuard],
-    title:'Agrikart-Cart'
+    title: 'Agrikart-Cart',
   },
-  { path: 'login', component: LoginComponent, title:'Agrikart-Login' },
+  { path: 'login', component: LoginComponent, title: 'Agrikart-Login' },
   {
     path: 'signup',
     loadChildren: () =>
       import('src/app/login/signup/signup.module').then((m) => m.SignupModule),
-      title:'Agrikart-Signup'
+    title: 'Agrikart-Signup',
   },
   { path: '**', component: NotfoundComponent },
 ];

@@ -5,7 +5,7 @@ import {
   tick,
 } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OrderComponent } from './order.component';
 import { CartServiceService } from 'src/app/Shared/Services/cart-service.service';
 
@@ -45,14 +45,13 @@ describe('OrderComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should have navigate to payment', fakeAsync(() => {
-    component.navigatetoPayment();
+    component.navigateToPayment();
     tick();
     expect(router.navigate).toHaveBeenCalledWith(['payment']);
   }));
-  it('should call ngOnint',()=>
-  {
-      spyOn(component,'ngOnInit');
-      component.ngOnInit();
-      expect(component.ngOnInit).toHaveBeenCalled()
-  })
+  it('should call ngOnint', () => {
+    spyOn(component, 'ngOnInit');
+    component.ngOnInit();
+    expect(component.ngOnInit).toHaveBeenCalled();
+  });
 });

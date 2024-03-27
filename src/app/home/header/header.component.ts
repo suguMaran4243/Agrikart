@@ -10,7 +10,6 @@ import { AuthenticationService } from 'src/app/login/Shared/Services/authenticat
 })
 export class HeaderComponent implements OnInit {
   public cartLength: number;
-  loginUsername: string;
   constructor(
     public authService: AuthenticationService,
     private router: Router,

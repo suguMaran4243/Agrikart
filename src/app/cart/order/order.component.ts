@@ -6,17 +6,17 @@ import { CartServiceService } from 'src/app/Shared/Services/cart-service.service
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  styleUrls: ['./order.component.css']
+  styleUrls: ['./order.component.css'],
 })
-export class OrderComponent implements OnInit{
+export class OrderComponent implements OnInit {
+  cartItem: Product[] = [];
+  public Product: Product;
 
-  cartItem:Product[]=[];
- public Product:Product;
-
-  constructor(private service:CartServiceService,private activeRoute:ActivatedRoute,private router :Router)
-  {
-
-  }
+  constructor(
+    private service: CartServiceService,
+    private activeRoute: ActivatedRoute,
+    private router: Router
+  ) {}
   /**
    * This lifecycle hook is called after the component is initialized.
    * Retrieves the id parameter from the route snapshot to find the current tab
@@ -24,21 +24,21 @@ export class OrderComponent implements OnInit{
    * @returns{void}
    */
   ngOnInit(): void {
-   
-  if (this.activeRoute.snapshot.paramMap.get('id')) {
-    this.Product= this.service.cartItems.at(parseInt(this.activeRoute.snapshot.paramMap.get('id')))
-    console.log(this.Product)
-  }
+    if (this.activeRoute.snapshot.paramMap.get('id')) {
+      this.Product = this.service.cartItems.at(
+        parseInt(this.activeRoute.snapshot.paramMap.get('id'))
+      );
+      console.log(this.Product);
+    }
   }
   /**
-   * 
+   *
    *Navigates to the Payment page using the router ['Payment']
    */
-  navigatetoPayment()
-  {
-    this.router.navigate(['payment'])
-   this.service.deleteFromCart(parseInt(this.activeRoute.snapshot.paramMap.get('id')))
+  navigateToPayment() {
+    this.router.navigate(['payment']);
+    this.service.deleteFromCart(
+      parseInt(this.activeRoute.snapshot.paramMap.get('id'))
+    );
   }
- 
-
 }

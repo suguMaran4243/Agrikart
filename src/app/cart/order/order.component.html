@@ -1,16 +1,12 @@
 <div class="order-container">
-    <div class="order" *ngIf="Product">
-      <h3 class="heading">{{Product.product_name}}</h3>
-      <p class="id">{{Product.id}}</p>
-      <p>
-        <img [src]="Product.product_image" alt="" />
-      </p>
-     
-      <span>Prize of {{Product.quantity}} kg/bag:</span> <p class="prize">{{Product.product_prize * Product.quantity}}</p>
-      <!-- <div class="count"><span class="decrease">-</span><span class="increase" >+</span></div> -->
-      <button routerLink="/paymode">PAYMODE</button>
-      <button (click)="navigatetoPayment()">Pay now</button>
-    </div>
+  <div class="order" *ngIf="Product">
+    <h3 class="heading">{{ Product.product_name }}</h3>
+    <p class="id">{{ Product.id }}</p>
+    <p><img [src]="Product.product_image" alt=""/></p>
+    <span>Prize of {{ Product.quantity }} kg/bag:</span>
+    <p class="prize">{{ Product.product_prize * Product.quantity }}</p>
+    <!-- <div class="count"><span class="decrease">-</span><span class="increase" >+</span></div> -->
+    <button routerLink="/paymode">PAYMODE</button>
+    <button (click)="navigateToPayment()">Pay now</button>
   </div>
- 
-  
+</div>

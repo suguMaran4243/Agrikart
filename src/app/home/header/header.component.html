@@ -8,15 +8,20 @@
     <a routerLink="contact" routerLinkActive="active">Contact</a>
 
     <div class="login">
-      <button class="btn"  routerLink="cart"  >
-        <i class="bi bi-cart" id="cart"><span class="cart-num"><sup>{{ cartLength }}</sup></span></i>
+      <button class="btn" routerLink="cart">
+        <i class="bi bi-cart" id="cart"
+          ><span class="cart-num"
+            ><sup>{{ cartLength }}</sup></span
+          ></i
+        >
       </button>
 
       <button
         class="btn btn-dark"
         *ngIf="!authService.loggedIn()"
         routerLink="login"
-        id="loginButton">
+        id="loginButton"
+      >
         Login
       </button>
 
@@ -24,7 +29,8 @@
         class="btn btn-dark"
         (click)="logout()"
         routerLink="login"
-        *ngIf="authService.loggedIn()">
+        *ngIf="authService.loggedIn()"
+      >
         Logout
       </button>
     </div>
